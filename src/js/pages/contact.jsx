@@ -1,10 +1,10 @@
 import React from 'react';
 
-import fbImage from '../../images/fb.png';
-import googleImage from '../../images/google.jpg';
-import leetcodeImage from '../../images/leetcode.png';
-import igImage from '../../images/instagram.png';
-import gitImage from '../../images/github.png';
+import fbImage from '../../assets/images/fb.png';
+import googleImage from '../../assets/images/google.jpg';
+import leetcodeImage from '../../assets/images/leetcode.png';
+import igImage from '../../assets/images/instagram.png';
+import gitImage from '../../assets/images/github.png';
 
 
 export default class Contact extends React.Component {
@@ -18,29 +18,21 @@ export default class Contact extends React.Component {
                         <h3 className="page-title">Wanna know more about me or Chat with me ? <br /></h3>
                         <h3 className="page-title">You can find my trace in the following commiunities and websites</h3>
                         <container className="topspace">
-                            <div>
+                            <a href="https://www.facebook.com/zizi.zheng.1" target="_blank">
                                 <img id="fbImg" className="animated pulse" src={fbImage} alt="fb icon" />
-                                <p id="fbP">
-                                Send me a message and chat with message<br />
-                                Then maybe we can become Facebook friend !
-                                </p>
-                            </div>
-                            <div>
-                                <a href=""><img id="gooImg" className="animated pulse" src={googleImage} alt="google icon" /></a>
-                                <p id="gooP">
-                                Rarely use for now<br />
-                                But you still can contact me from google+
-                                </p>
-                            </div>
-                            <img className="animated pulse" src={igImage} alt="instagram icon" />
-                            <img className="animated pulse" src={gitImage} alt="github icon" />
-                            <div>
+                            </a>
+                            <a href="https://plus.google.com/u/0/111683413001408758628" target="_blank">
+                                <img id="gooImg" className="animated pulse" src={googleImage} alt="google icon" />
+                            </a>
+                            <a href="https://www.instagram.com/zizi_bartz/" target="_blank">
+                                <img className="animated pulse" src={igImage} alt="instagram icon" />
+                            </a>
+                            <a href="https://github.com/zizizheng" target="_blank">
+                                <img className="animated pulse" src={gitImage} alt="github icon" />
+                            </a>
+                            <a href="https://leetcode.com/zizizheng/" target="_blank">
                                 <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" />
-                                <p id="leetP">
-                                Sometimes I would like to take some challenge in Leetcode <br />
-                                It helps me rebuilding my logic and program skill
-                                </p>
-                            </div>
+                            </a>
                         </container>
 
                     </div>

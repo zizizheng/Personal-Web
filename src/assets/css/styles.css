@@ -581,7 +581,7 @@ footer.entry-meta {
 
 **********************************************************************/
 #main {
-  margin: 50px 0 50px 0; }
+  margin: 50px 0; }
   #main p {
     padding: 0;
     line-height: 35px; }
@@ -731,6 +731,14 @@ footer.entry-meta {
       animation-duration: 1.5s; }
   #contactBlock container div {
     display: flex; }
+
+#profolio aside {
+  margin-top: 20px; }
+  #profolio aside ul {
+    padding-left: 0; }
+  #profolio aside li {
+    margin-left: 0;
+    padding-left: 0; }
 
 /*********************************************************************
 

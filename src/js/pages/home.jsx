@@ -1,8 +1,8 @@
 import React from 'react';
 
-import myself from '../../images/myself.jpg';
-import temImage from '../../images/s1.jpg'
-import foodhub from '../../images/profilio/foodhub.png';
+import myself from '../../assets/images/myself.jpg';
+import temImage from '../../assets/images/s1.jpg'
+import foodhub from '../../assets/images/profilio/foodhub.png';
 
 export default class Home extends React.Component {
     render(){
@@ -25,7 +25,7 @@ export default class Home extends React.Component {
                         <h2 className="section-title"><span>Glance</span></h2>
                         <div className="row">
                         <div className="col-sm-6 col-md-4">
-                            <img src={myself} alt="personal image" />
+                            <img src={myself} alt="personal" />
                         </div>
                         <div className="col-sm-6 col-md-8">
                             <h3 className="lead">My name is ZiZi Zheng<br /></h3>
@@ -49,7 +49,7 @@ export default class Home extends React.Component {
                             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <a className="thumbnail" href="sidebar-right.html">
                                 <span className="img">
-                                    <img src={foodhub} alt="foodhub image" />
+                                    <img src={foodhub} alt="foodhub" />
                                     <span className="seeDetail"><span className="more">See details &rarr;</span></span>
                                 </span>
                                 <span className="title">Foodhub - Post System</span>

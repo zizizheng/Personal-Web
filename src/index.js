@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import Layout from './js/pages/layout';
 import Footer from './js/pages/footer';
@@ -9,8 +9,8 @@ import About from './js/pages/about';
 import Profolio from './js/pages/profolio';
 import Contact from './js/pages/contact';
 
-import './css/bootstrap.min.css';
-import './css/styles.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/styles.css';
 
 const app = document.getElementById('app');
 

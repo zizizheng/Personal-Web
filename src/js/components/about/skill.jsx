@@ -1,11 +1,11 @@
 import React from 'react';
 import SlideShow from './slideShow';
 
-import htmlImage from '../../../images/html5.png';
-import cssImage from '../../../images/css3.png';
-import jsImage from '../../../images/javascript.png';
-import toolImage from '../../../images/toolkit.png';
-import guitar from '../../../images/guitar.jpg';
+import htmlImage from '../../../assets/images/html5.png';
+import cssImage from '../../../assets/images/css3.png';
+import jsImage from '../../../assets/images/javascript.png';
+import toolImage from '../../../assets/images/toolkit.png';
+import guitar from '../../../assets/images/guitar.jpg';
 
 export default class Skill extends React.Component {
     constructor(props){
@@ -24,7 +24,6 @@ export default class Skill extends React.Component {
                 break;
             case 'music':
                 return (<MusicSKillList />);
-                break;
             default:
                 break;
         }
@@ -72,6 +71,7 @@ export default class Skill extends React.Component {
                     </ul>
                 </div>
             );
+            return null;
         });
     }
 
@@ -118,6 +118,7 @@ export default class Skill extends React.Component {
                     </ul>
                 </div>
             );
+            return null;
         });
     }
 

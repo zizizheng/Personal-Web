@@ -1,6 +1,6 @@
 import React from 'react';
-import sound from '../../../images/band_photo/sound.jpg';
-import coffee from '../../../images/band_photo/coffee.jpg';
+import sound from '../../../assets/images/band_photo/sound.jpg';
+import coffee from '../../../assets/images/band_photo/coffee.jpg';
 
 export default class SlideShow extends React.Component {
     constructor(){
@@ -13,7 +13,7 @@ export default class SlideShow extends React.Component {
     render(){
         return (
             <div id="slideShow">
-                <img src={this.state.src} />
+                <img src={this.state.src} alt="band photos" />
                 <div className="arrow leftArrow" onClick={()=>this.photoClick(-1)}>&#10094;</div>
                 <div className="arrow rightArrow" onClick={()=>this.photoClick(1)}>&#10095;</div>
             </div>

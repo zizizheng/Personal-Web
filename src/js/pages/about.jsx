@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Skill from '../components/about/skill';
-import goodguy from '../../images/goodguy.jpg';
+import goodguy from '../../assets/images/goodguy.jpg';
 
 export default class About extends React.Component {
     constructor(){
