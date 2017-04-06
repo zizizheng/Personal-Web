@@ -1,10 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Nav from '../components/layout/nav';
 import Header from '../components/layout/header';
 
-export default class Layout extends React.Component{
+class Layout extends React.Component{
+
     render(){
+
+        this.props.dispatch({type: "CHANGE_PAGE", name: "about"})
+        console.log(this.props);
         return (
             <div>
                 <Header />
@@ -14,3 +19,5 @@ export default class Layout extends React.Component{
         );
     }
 }
+
+export default connect()(Layout);

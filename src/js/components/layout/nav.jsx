@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
 import { Link } from 'react-router-dom';
 
 export default class Nav extends React.Component{
@@ -48,6 +47,4 @@ export default class Nav extends React.Component{
         }
         // console.log(this.navOffset + '   ' + curOffset);
     }
-
-
 }
