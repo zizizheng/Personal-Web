@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-export default class Nav extends React.Component{
+class Nav extends React.Component{
 
     constructor(){
         super();
         this.handleScroll = this.handleScroll.bind(this);
+        this.changePage = this.changePage.bind(this);
         this.state = { navStyle: "navbar navbar-default navbar-sticky" };
     }
 
@@ -26,15 +28,19 @@ export default class Nav extends React.Component{
                     </div>
                     <div className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>		
-                            <li><Link to="/profolio">Profolio</Link></li>		
-                            <li><Link to="/contact">Contact</Link></li>		
+                            <li><Link to="/" onClick={()=>{this.changePage('home')}}>Home</Link></li>
+                            <li><Link to="/about" onClick={()=>{this.changePage('about')}}>About</Link></li>		
+                            <li><Link to="/profolio" onClick={()=>{this.changePage('profolio')}}>Profolio</Link></li>		
+                            <li><Link to="/contact" onClick={()=>{this.changePage('contact')}}>Contact</Link></li>		
                         </ul>
                     </div>
                 </div>
             </nav>
         );
+    }
+
+    changePage(v){
+        this.props.dispatch({type: "CHANGE_PAGE", name: v});
     }
 
     handleScroll(){
@@ -48,3 +54,5 @@ export default class Nav extends React.Component{
         // console.log(this.navOffset + '   ' + curOffset);
     }
 }
+
+export default connect()(Nav);

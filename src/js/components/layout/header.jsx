@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 
 import myself from '../../../assets/images/myself.jpg';
 
-export default class Header extends React.Component{
+
+
+class Header extends React.Component{
 
     constructor(){
         super();
@@ -18,7 +21,7 @@ export default class Header extends React.Component{
     }
 
     render(){
-
+        if(this.props.curPage !== 'home') window.removeEventListener('scroll', this.handleScroll);
         return (
             <header id="header" ref="header" className="home">
                 <div id="head" ref="head" className="parallax" style={this.state}>
@@ -41,3 +44,11 @@ export default class Header extends React.Component{
         }
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        curPage: state.navReducer.curPage
+    }
+}
+
+export default connect(mapStateToProps)(Header);
