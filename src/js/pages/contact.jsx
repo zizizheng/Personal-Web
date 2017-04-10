@@ -37,10 +37,10 @@ export default class Contact extends React.Component {
 
                     </div>
 
-                    <div className="row">
+                    <div id="respond" className="row">
                         <div className="col-sm-8 col-sm-offset-2">
 
-                            <div id="respond">
+                            <div>
                                 <h3 className="page-title text-center">Or you can just send me an email</h3>
                                 <form action="" method="post" id="commentform" className="">
                                     <div className="form-group">
@@ -56,7 +56,7 @@ export default class Contact extends React.Component {
                                         <input type="nane" className="form-control" id="inputWeb" placeholder="http://" />
                                     </div>
                                     <div className="form-group">
-                                        <label for="inputComment">Comment</label>
+                                        <label for="inputComment">Write something</label>
                                         <textarea className="form-control" rows="6"></textarea>
                                     </div>
                                     <div className="row">

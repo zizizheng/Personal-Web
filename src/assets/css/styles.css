@@ -740,6 +740,20 @@ footer.entry-meta {
     margin-left: 0;
     padding-left: 0; }
 
+#profolio article h1 {
+  font-size: 2rem;
+  text-align: center; }
+
+#profolio article h2 {
+  border-radius: 13px;
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.125em;
+  font-family: Georgia, serif;
+  font-style: italic;
+  opacity: 0.7; }
+
 /*********************************************************************
 
 

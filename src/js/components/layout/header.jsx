@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import myself from '../../../assets/images/myself.jpg';
 
@@ -29,7 +30,9 @@ class Header extends React.Component{
                         <img className="img-circle" src={myself} alt="personal" />
                         <span className="title">ZiZi Zheng</span>
                         <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
-                        <span className="tagline"><a href="">z0931752096@gmail.com</a></span>
+                        <span className="tagline">
+                            <Link to="/contact#respond">z0931752096@gmail.com</Link>
+                        </span>
                     </h1>
                 </div>
             </header>
