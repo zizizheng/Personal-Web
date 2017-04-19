@@ -35,8 +35,6 @@ export default class Profolio extends React.Component {
                                 <li ref="master">
                                     <a href="#" onClick={(e)=>{ this.changeContent('master', e)}}>Master Dissertion</a>
                                 </li>
-                                <li onClick={()=>{ this.changeContent()}}><a>Someting</a></li>
-                                <li onClick={()=>{ this.changeContent()}}><a>oh shit</a></li>
                             </ul>
 
                         </aside>
