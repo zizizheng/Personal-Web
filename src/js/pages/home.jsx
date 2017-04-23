@@ -1,11 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import myself from '../../assets/images/myself.jpg';
 import temImage from '../../assets/images/s1.jpg'
 import foodhub from '../../assets/images/profilio/foodhub.png';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
+
+    constructor(){
+        super();
+        this.changePage = this.changePage.bind(this);
+    }
+
     render(){
         return (
             <main id="main">
@@ -14,9 +21,10 @@ export default class Home extends React.Component {
                         <div className="col-md-12">
                             <p className="lead text-muted text-center">
                                 Hi, this is my personal page.<br />
-                                Self-introduction is presented in <Link to="/about">About</Link>, including my programing skills and my personal experience.<br />
-                                <Link to="/profolio">Profolio</Link> shows the recent works I have done, and my master's dissertation is presented as well.<br />
-                                <Link to="/contact">Contact</Link> contains any information that can contact me, please check it.<br />
+                                Self-introduction is presented in 
+                                <Link to="/about" onClick={()=> this.changePage('about')}> About</Link>, including my programing skills and my personal experience.<br />
+                                <Link to="/profolio" onClick={()=> this.changePage('profolio')}>Profolio</Link> shows the recent works I have done, and my master's dissertation is presented as well.<br />
+                                <Link to="/contact" onClick={()=> this.changePage('contact')}>Contact</Link> contains any information that can contact me, please check it.<br />
                             </p>
                             <p className="lead text-center"><strong>Hope You Enjoy!</strong></p>
                         </div>
@@ -48,7 +56,7 @@ export default class Home extends React.Component {
                         <h2 className="section-title"><span>Recent Works</span></h2>
                         <div className="thumbnails recentworks row">
                             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <Link to={{ pathname: '/profolio', state: { curPage: 'foodhub' }}} className="thumbnail">
+                                <Link to={{ pathname: '/profolio', state: { curPage: 'foodhub' }}} className="thumbnail" onClick={()=> this.changePage('profolio')}>
                                     <span className="img">
                                         <img src={foodhub} alt="foodhub" />
                                         <span className="seeDetail"><span className="more">See details &rarr;</span></span>
@@ -89,4 +97,10 @@ export default class Home extends React.Component {
             </main>
         );
     }
+
+    changePage(v){
+        this.props.dispatch({type: "CHANGE_PAGE", name: v});
+    }
 }
+
+export default connect()(Home);

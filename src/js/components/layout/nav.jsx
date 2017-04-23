@@ -15,11 +15,16 @@ class Nav extends React.Component{
     componentDidMount(){
         window.addEventListener('scroll', this.handleScroll);
         this.navbar = ReactDOM.findDOMNode(this.refs.nav);
-        this.navOffset = this.navbar.getBoundingClientRect().top;
+        this.navOffset = this.navbar.getBoundingClientRect().top;  
     }
 
+    componentWillUpdate(){
+        this.navOffset = this.props.navOffset;
+        console.log(ReactDOM.findDOMNode(this.refs.header));
+    }
 
     render(){
+
         return (
             <nav ref="nav" className={this.state.navStyle}>
                 <div className="container-fluid">
@@ -55,4 +60,10 @@ class Nav extends React.Component{
     }
 }
 
-export default connect()(Nav);
+const mapStateToProps = (state) => {
+    return {
+        curPage: state.navReducer.curPage,
+        navOffset: state.navReducer.navOffset
+    }
+}
+export default connect(mapStateToProps)(Nav);

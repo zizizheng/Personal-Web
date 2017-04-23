@@ -24,7 +24,7 @@ export default class Profolio extends React.Component {
 
                 <div id="profolio" className="container">
 
-                    <div className="row topspace">
+                    <div className="row">
                         
                         <aside className="col-lg-2">
 

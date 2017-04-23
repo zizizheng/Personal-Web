@@ -23,20 +23,39 @@ class Header extends React.Component{
 
     render(){
         if(this.props.curPage !== 'home') window.removeEventListener('scroll', this.handleScroll);
-        return (
-            <header id="header" ref="header" className="home">
-                <div id="head" ref="head" className="parallax" style={this.state}>
-                    <h1 id="logo" className="text-center">
-                        <img className="img-circle" src={myself} alt="personal" />
-                        <span className="title">ZiZi Zheng</span>
-                        <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
-                        <span className="tagline">
-                            <Link to="/contact#respond">z0931752096@gmail.com</Link>
-                        </span>
-                    </h1>
-                </div>
-            </header>
-        );
+        else window.addEventListener('scroll', this.handleScroll);
+
+        switch(this.props.curPage){
+            case 'home':
+                return (
+                    <header id="header" ref="header" className="home">
+                        <div id="head" ref="head" className="parallax">
+                            <h1 id="logo" className="text-center">
+                                <img className="img-circle" src={myself} alt="personal" />
+                                <span className="title">ZiZi Zheng</span>
+                                <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
+                                <span className="tagline">
+                                    <Link to="/contact#respond">z0931752096@gmail.com</Link>
+                                </span>
+                            </h1>
+                        </div>
+                    </header>
+                );
+
+            default:
+                return (
+                    <header id="header" ref="header">
+                        <div id="head" ref="head" className="parallax text-center" style={this.state}>
+                            <h1 className="title">ZiZi Zheng</h1>
+                            <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
+                            <span className="tagline">
+                                <Link to="/contact#respond">z0931752096@gmail.com</Link>
+                            </span>
+                        </div>
+                    </header>
+                );
+        }
+        
     }
     
     handleScroll(){

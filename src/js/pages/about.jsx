@@ -39,8 +39,8 @@ export default class About extends React.Component {
                     <h2 className="section-title">
                         <span>Skills</span>
                         <ul id="skillsList">
-                            <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>About Web</a></li>
-                            <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Program Language</a></li>
+                            <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Developmentnav</a></li>
+                            <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Computer Science</a></li>
                             <li><a href="#" onClick={(e)=> this.skillClick('music', e)}>Music</a></li>
                         </ul>
                     </h2>
