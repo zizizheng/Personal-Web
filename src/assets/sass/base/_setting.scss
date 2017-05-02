@@ -1,0 +1,96 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    @include font-size(1.5);
+    font-family: $font-sans;
+    color: $color-default;
+    padding: 0;
+}
+
+.topspace {
+    margin-top: 40px;
+}
+p {
+    line-height: 1.6em;
+    margin: 0 0 30px 0;
+}
+
+ul,
+ol {
+    line-height: 1.6em;
+    margin: 0 0 30px 0;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 30px;
+    border-left: 5px solid #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font-sans;
+    font-weight: 400;
+    color: $color-caption;
+}
+
+h1 {
+    @include font-size(4);
+}
+
+h2 {
+    @include font-size(3.6);
+}
+
+h3 {
+    @include font-size(3);
+}
+
+h4 {
+    @include font-size(2.4);
+}
+
+h5 {
+    @include font-size(2);
+}
+
+a {
+    color: $color-action;
+    &:hover {
+        color: lighten($color-action, 15%);
+    }
+}
+
+.lead {
+    font-weight: 300;
+    @include font-size(2.1);
+}
+
+.text-msg {
+    line-height: 1.7em;
+    color: $color-dimmed;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-top: -0.23em;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}

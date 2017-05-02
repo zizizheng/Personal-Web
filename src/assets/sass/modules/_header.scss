@@ -1,0 +1,56 @@
+
+/*********************************************************************
+
+                                HEADER
+
+**********************************************************************/
+
+#head {
+    background: $header-bg;
+    background-size: $header-bg-size;
+    color: #7C7C7C;
+    padding: 30px 0 35px 0;
+    img.img-circle {
+        display: block;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border: 9px solid rgba(0, 0, 0, .05);
+        margin: 0 auto;
+    }
+    .title {
+        font-family: $font-special;
+        @include font-size(4.9);
+        a {
+            text-decoration: none;
+            color: $color-caption;
+        }
+    }
+    .tagline {
+        display: block;
+        @include font-size(1.6);
+        line-height: 1.6em;
+        color: #7C7C7C;
+        margin: 5px 0 0;
+        b {
+            font-weight: normal;
+        }
+        a {
+            color: crimson;
+        }
+    }
+}
+
+// on homepage header is a bit different
+.home{
+    #head {
+        padding: 90px 0;
+        .title {
+            @include font-size(4.9);
+        }
+        .tagline {
+            @include font-size(1.8);
+            margin: 15px 0 0;
+        }
+    }
+}

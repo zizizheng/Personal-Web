@@ -8,6 +8,14 @@ import gitImage from '../../assets/images/github.png';
 
 
 export default class Contact extends React.Component {
+
+    constructor(){
+        super();
+        this.state = {
+            message: 'balalalalala'
+        };
+    }
+
     render(){
         return (
             <main id="main">
@@ -34,10 +42,15 @@ export default class Contact extends React.Component {
                                 <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" />
                             </a>
                         </container>
+                        
+                        <div className="message">
+                            <span>{ this.state.message }</span>
+                        </div>
 
                     </div>
 
-                    <div id="respond" className="row">
+
+                    {/*<div id="respond" className="row">
                         <div className="col-sm-8 col-sm-offset-2">
 
                             <div>
@@ -68,7 +81,7 @@ export default class Contact extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="clearfix"></div>
+                    <div className="clearfix"></div>*/}
 
                 </div>
 

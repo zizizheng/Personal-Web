@@ -14,7 +14,7 @@ export default class About extends React.Component {
         
         return (
             <main id="main">
-                <div id="profile" className="container">
+                <div id="profileInAbout" className="container">
 
                     <img src={goodguy} alt="I'm a good guy" />
 
@@ -35,11 +35,11 @@ export default class About extends React.Component {
                     </article>
                 </div>
                 <div id="skills" className="personal container">
-                <div className="row featured topspace">
+                <div className="featured topspace">
                     <h2 className="section-title">
                         <span>Skills</span>
                         <ul id="skillsList">
-                            <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Developmentnav</a></li>
+                            <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Development</a></li>
                             <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Computer Science</a></li>
                             <li><a href="#" onClick={(e)=> this.skillClick('music', e)}>Music</a></li>
                         </ul>

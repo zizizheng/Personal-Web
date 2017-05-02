@@ -129,16 +129,20 @@ class MusicSKillList extends React.Component{
         return (
             <div>
                 <div id="music" >
-                    <div　id="musicDes">
+                    <div　id="musicDes" className="page-header">
                         <h3><i>Can't Live Without Music</i></h3>
                         <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
                             In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar.
                             Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
                         </p>
                     </div>
-                    <img id="guitar" src={guitar} alt="I with guitar" />
+                    <div>
+                        <img id="guitar" src={guitar} alt="I with guitar" />
+                    </div>
                 </div>
+
                 <SlideShow />
+                
             </div>
         );
         

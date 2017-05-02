@@ -1,0 +1,23 @@
+
+$color-default: #666666;
+$color-contrast: #333333;
+$color-dimmed: lighten($color-default, 30%);
+$color-action: #bd1550;
+$color-caption: $color-contrast;
+$color-meta: #a5a5a5;
+$font-sans: "Open sans",
+Helvetica,
+Arial,
+sans-serif;
+$font-utilities: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-serif: Georgia,
+serif;
+$font-special: Alice,
+Georgia,
+serif;
+$header-bg: #f4f4f4 url(../images/bg.jpg) top center;
+$header-bg-size: cover;
+$between-p-image: 50px;
