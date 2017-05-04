@@ -201,13 +201,17 @@
 }
 
 #profolio {
-
+    p {
+        padding: 0 30px;
+    }
     .graphBlock {
         margin: 20px;
+        margin-bottom: 40px;
         text-align: center;
 
         p { 
-            margin: 5px 0;
+            margin-top: 10px;
+            margin-bottom: 5px;
             font-style: italic;
             font-weight: 600;
         }
@@ -228,6 +232,9 @@
     }
 
     article {
+        ul {
+            list-style-position: inside;
+        }
         li {
             @include font-size(1.5);
             line-height: 1.6rem;
@@ -238,9 +245,11 @@
             text-align: center;
             margin: 10px 0;
         }
-        h2 {
+        .subtitle {
             border-radius: 13px;
             background-color: #ddd;
+            margin-top: 20px;
+            margin-bottom: 20px;
             padding: 15px;
             text-align: center;
             font-size: 1.125em;
@@ -405,7 +414,7 @@ img {
         overflow: hidden;
         position: relative;
         width: 100%;
-        height: 180px;
+        height: 160px;
         margin: 0 0 20px;
     }
     .title {

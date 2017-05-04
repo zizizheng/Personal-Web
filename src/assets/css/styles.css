@@ -169,15 +169,18 @@ a {
   .nav-side > li {
     list-style-type: none; }
     .nav-side > li > a {
+      cursor: pointer;
       padding-top: 5px;
       padding-bottom: 5px;
-      color: #f392b4; }
+      color: #f392b4;
+      text-decoration: none; }
       .nav-side > li > a:hover {
         color: #bd1550;
-        background: none;
-        text-decoration: none; }
+        background: none; }
   .nav-side > li.active > a {
-    color: #bd1550; }
+    cursor: pointer;
+    color: #bd1550;
+    text-shadow: 1px 1px 3px maroon; }
 
 /*********************************************************************
 
@@ -388,11 +391,16 @@ a {
     text-align: center;
     margin: 50px 0; }
 
+#profolio p {
+  padding: 0 30px; }
+
 #profolio .graphBlock {
   margin: 20px;
+  margin-bottom: 40px;
   text-align: center; }
   #profolio .graphBlock p {
-    margin: 5px 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-style: italic;
     font-weight: 600; }
   #profolio .graphBlock img {
@@ -406,6 +414,9 @@ a {
     margin-left: 0;
     padding-left: 0; }
 
+#profolio article ul {
+  list-style-position: inside; }
+
 #profolio article li {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -417,9 +428,11 @@ a {
   text-align: center;
   margin: 10px 0; }
 
-#profolio article h2 {
+#profolio article .subtitle {
   border-radius: 13px;
   background-color: #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 15px;
   text-align: center;
   font-size: 1.125em;
@@ -561,7 +574,7 @@ img {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 160px;
     margin: 0 0 20px; }
   .thumbnail .title {
     text-transform: uppercase;

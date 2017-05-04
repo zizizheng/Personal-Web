@@ -148,18 +148,21 @@ $navbar-vivid-link-hover-color       : #bd1550;
     > li {
         list-style-type: none;
         > a {
+            cursor: pointer;            
             padding-top: 5px;
             padding-bottom: 5px;
             color: $navbar-vivid-link-color;
-            &:hover {
+            text-decoration: none;
+            &:hover{
                 color: $navbar-vivid-link-hover-color;
                 background: none;
-                text-decoration: none;
             }
         }
     }
-    >li.active>a {
+    >li.active > a {
+        cursor: pointer;
         color: $navbar-vivid-link-hover-color;
+        text-shadow: 1px 1px 3px maroon;
     }
 }
 

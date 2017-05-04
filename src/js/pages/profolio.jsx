@@ -30,10 +30,10 @@ export default class Profolio extends React.Component {
 
                             <ul ref="list" className="text-right nav-side">
                                 <li ref="foodhub" className="active" >
-                                    <a href="#" onClick={(e)=>{ this.changeContent('foodhub', e)}}>FoodHub</a>
+                                    <a href="" onClick={(e)=>{ this.changeContent('foodhub', e)}}>FoodHub</a>
                                 </li>
                                 <li ref="master">
-                                    <a href="#" onClick={(e)=>{ this.changeContent('master', e)}}>Master Dissertion</a>
+                                    <a href="" onClick={(e)=>{ this.changeContent('master', e)}}>Master Dissertion</a>
                                 </li>
                             </ul>
 
