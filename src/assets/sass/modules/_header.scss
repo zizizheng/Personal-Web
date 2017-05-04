@@ -10,6 +10,7 @@
     background-size: $header-bg-size;
     color: #7C7C7C;
     padding: 30px 0 35px 0;
+    text-align: center;
     img.img-circle {
         display: block;
         width: 140px;
@@ -17,6 +18,7 @@
         overflow: hidden;
         border: 9px solid rgba(0, 0, 0, .05);
         margin: 0 auto;
+        border-radius: 50%;
     }
     .title {
         font-family: $font-special;
@@ -44,6 +46,7 @@
 // on homepage header is a bit different
 .home{
     #head {
+        text-align: center;
         padding: 90px 0;
         .title {
             @include font-size(4.9);

@@ -71,6 +71,9 @@ a {
     &:hover {
         color: lighten($color-action, 15%);
     }
+    &:hover, &:focus, &:active, &:visited {
+        text-decoration: none;
+    }
 }
 
 .lead {

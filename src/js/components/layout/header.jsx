@@ -30,7 +30,7 @@ class Header extends React.Component{
                 return (
                     <header id="header" ref="header" className="home">
                         <div id="head" ref="head" className="parallax">
-                            <h1 id="logo" className="text-center">
+                            <h1 id="logo">
                                 <img className="img-circle" src={myself} alt="personal" />
                                 <span className="title">ZiZi Zheng</span>
                                 <span className="tagline">A beginner for Web, full of passion for new things<br/></span>

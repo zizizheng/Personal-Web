@@ -27,18 +27,13 @@ class Nav extends React.Component{
 
         return (
             <nav ref="nav" className={this.state.navStyle}>
-                <div className="container-fluid">
-                    <div className="navbar-header">
-                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span className="sr-only">Toggle navigation</span> <span className="icon-bar"></span> <span className="icon-bar"></span> <span className="icon-bar"></span> </button>
-                    </div>
-                    <div className="navbar-collapse collapse">
-                        <ul className="nav navbar-nav">
-                            <li><Link to="/" onClick={()=>{this.changePage('home')}}>Home</Link></li>
-                            <li><Link to="/about" onClick={()=>{this.changePage('about')}}>About</Link></li>		
-                            <li><Link to="/profolio" onClick={()=>{this.changePage('profolio')}}>Profolio</Link></li>		
-                            <li><Link to="/contact" onClick={()=>{this.changePage('contact')}}>Contact</Link></li>		
-                        </ul>
-                    </div>
+                <div className="nav-container">
+                    <ul className="navbar-list">
+                        <li><Link to="/" onClick={()=>{this.changePage('home')}}>Home</Link></li>
+                        <li><Link to="/about" onClick={()=>{this.changePage('about')}}>About</Link></li>		
+                        <li><Link to="/profolio" onClick={()=>{this.changePage('profolio')}}>Profolio</Link></li>		
+                        <li><Link to="/contact" onClick={()=>{this.changePage('contact')}}>Contact</Link></li>		
+                    </ul>
                 </div>
             </nav>
         );

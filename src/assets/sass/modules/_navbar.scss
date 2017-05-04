@@ -3,7 +3,7 @@
                                 Navbar
 
 **********************************************************************/
-@import '../bootstrap/mixins.scss';
+@import '../mixins.scss';
 
 // Navbar settings
 $navbar-font                         : "Open sans", Helvetica, Arial, sans-serif;
@@ -27,11 +27,13 @@ $navbar-vivid-link-hover-color       : #bd1550;
 
 // Base class
 .navbar {
+    position: block;
     border-width: 1px 0;
     border-radius: 0;    
     width: 100%;
     padding: 0;
-    
+    background-color: white;
+    z-index: 1000;
     &.stick {
         position: fixed;
         top: 0;
@@ -40,40 +42,40 @@ $navbar-vivid-link-hover-color       : #bd1550;
     }
 }
 
-// This one - for menu stickness
+.nav-container {
+    border: 1px solid #ccc;
+    padding: 15px 0;
 
-
-// Navbar collapse (body)
-//
-// Group your navbar content into this for easy collapsing and expanding across
-// various device sizes. By default, this content is collapsed when <768px, but
-// will expand past that for a horizontal display.
-.navbar-collapse {
-    // .border-radius(0);
-    border-radius: 0;
+}
+.navbar-list {
     font-family: $navbar-font;
     font-weight: $navbar-font-weight;
     text-transform: $navbar-font-transform;
-    .navbar-nav {
-        display: block;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    >li {
         float: none;
-        margin: 0 auto;
-        text-align: center;
-        >li {
-            float: none;
-            display: inline-block;
-            >a {
-                padding: 18px 30px;
+        display: inline-block;
+        > a {
+            color: $navbar-default-link-color;
+            padding: 18px 30px;
+            &:hover {
+                color: $navbar-default-link-hover-color;
+                background-color: $navbar-default-link-hover-bg;
             }
         }
-    }
-}
-
-.dropdown ul.dropdown-menu {
-    top: 85%;
-    text-align: left;
-    >li>a {
-        padding: 5px 30px;
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                font-weight: 500;
+                color: $navbar-default-link-active-color;
+                background-color: $navbar-default-link-active-bg;
+            }
+        }
     }
 }
 
@@ -81,31 +83,7 @@ $navbar-vivid-link-hover-color       : #bd1550;
 .navbar-default {
     background-color: $navbar-default-bg;
     border-color: $navbar-default-border;
-    .navbar-nav {
-        >li>a {
-            color: $navbar-default-link-color;
-            &:hover {
-                color: $navbar-default-link-hover-color;
-                background-color: $navbar-default-link-hover-bg;
-            }
-        }
-        >.active>a {
-            &,
-            &:hover,
-            &:focus {
-                font-weight: 500;
-                color: $navbar-default-link-active-color;
-                background-color: $navbar-default-link-active-bg;
-            }
-        }
-    }
-    .dropdown ul.dropdown-menu>li>a {
-        color: $navbar-default-link-color;
-        &:hover {
-            background-color: $navbar-default-link-hover-bg-sub;
-            color: $navbar-default-link-active-color;
-        }
-    }
+    
     .navbar-toggle {
         border-color: $navbar-default-toggle-border-color;
         &:hover,
@@ -119,18 +97,6 @@ $navbar-vivid-link-hover-color       : #bd1550;
     .navbar-collapse,
     .navbar-form {
         border-color: $navbar-default-border;
-    }
-    // Dropdown menu items
-    .navbar-nav {
-        // Remove background color from open dropdown
-        >.open>a {
-            &,
-            &:hover,
-            &:focus {
-                background-color: $navbar-default-link-active-bg;
-                color: $navbar-default-link-active-color;
-            }
-        }
     }
 }
 
