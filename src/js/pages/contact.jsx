@@ -11,9 +11,19 @@ export default class Contact extends React.Component {
 
     constructor(){
         super();
+        this.timeout = [];
         this.state = {
-            message: 'balalalalala'
+            message: 'Mouse over to see some message about icon',
+            curHover: 'none'
         };
+        this.message = {
+            'fb': 'Chat with me by using private message, I will respond as soon as I can',
+            'google': 'I commonly use Gmail, please send me an email and start our conversation',
+            'ig': 'Here are some of my personal photo, but it\'s private now...',
+            'gh': 'Source code including Foodhub and this website are stored on the github, feel free to leave your comments and discuss with me',
+            'leet': 'Sometimes I practice algorithm on Leetcode to make my logical of thinking'
+        }
+        this.onHover = this.onHover.bind(this);
     }
 
     render(){
@@ -22,70 +32,57 @@ export default class Contact extends React.Component {
 
                 <div className="container">
 
-                    <div id="contactBlock" className="text-center">
-                        <h3 className="page-title">Wanna know more about me or Chat with me ? <br /></h3>
-                        <h3 className="page-title">You can find my trace in the following commiunities and websites</h3>
+                    <div id="contactBlock">
+                        <h3 className="page-title text-center">
+                            Wanna know more about me or Chat with me ? <br /> </h3>
+                        <h3 className="page-title text-center">
+                            You can find my trace in the following commiunities and websites
+                        </h3>
+                        
                         <container className="topspace">
-                            <a href="https://www.facebook.com/zizi.zheng.1" target="_blank">
-                                <img id="fbImg" className="animated pulse" src={fbImage} alt="fb icon" />
+                            <a href="https://www.facebook.com/zizi.zheng.1" target="_blank" >
+                                <img id="fbImg" className="animated pulse" src={fbImage} alt="fb icon" onMouseOver={() => this.onHover('fb')} />
                             </a>
                             <a href="https://plus.google.com/u/0/111683413001408758628" target="_blank">
-                                <img id="gooImg" className="animated pulse" src={googleImage} alt="google icon" />
+                                <img id="gooImg" className="animated pulse" src={googleImage} alt="google icon" onMouseOver={() => this.onHover('google')}/>
                             </a>
                             <a href="https://www.instagram.com/zizi_bartz/" target="_blank">
-                                <img className="animated pulse" src={igImage} alt="instagram icon" />
+                                <img className="animated pulse" src={igImage} alt="instagram icon" onMouseOver={() => this.onHover('ig')}/>
                             </a>
                             <a href="https://github.com/zizizheng" target="_blank">
-                                <img className="animated pulse" src={gitImage} alt="github icon" />
+                                <img className="animated pulse" src={gitImage} alt="github icon" onMouseOver={() => this.onHover('gh')}/>
                             </a>
                             <a href="https://leetcode.com/zizizheng/" target="_blank">
-                                <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" />
+                                <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" onMouseOver={() => this.onHover('leet')}/>
                             </a>
                         </container>
                         
                         <div className="message">
-                            <span>{ this.state.message }</span>
+                            <span className="lead">{ this.state.message }</span>
                         </div>
 
                     </div>
-
-
-                    {/*<div id="respond" className="row">
-                        <div className="col-sm-8 col-sm-offset-2">
-
-                            <div>
-                                <h3 className="page-title text-center">Or you can just send me an email</h3>
-                                <form action="" method="post" id="commentform" className="">
-                                    <div className="form-group">
-                                        <label for="inputName">Name</label>
-                                        <input type="text" className="form-control" id="inputName" placeholder="Enter your name" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label for="inputEmail">Email address <i className="text-danger">*</i></label>
-                                        <input type="email" className="form-control" id="inputEmail" placeholder="Enter your email" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label for="inputWeb">Website</label>
-                                        <input type="nane" className="form-control" id="inputWeb" placeholder="http://" />
-                                    </div>
-                                    <div className="form-group">
-                                        <label for="inputComment">Write something</label>
-                                        <textarea className="form-control" rows="6"></textarea>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-offset-8 col-md-4 text-right">
-                                            <button type="submit" className="btn btn-action">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="clearfix"></div>*/}
 
                 </div>
 
             </main>
         );
+    }
+
+    onHover(s){
+        if (this.state.curHover === s) return ;
+
+        this.setState({curHover: s});
+        this.timeout.forEach((t)=>{ clearTimeout(t) });
+        this.timeout = [];
+        let output = '', to;
+        for (let i = 0; i < this.message[s].length; i++){
+            //eslint-disable-next-line
+            to = setTimeout(() => {
+                output += this.message[s][i];                
+                this.setState({message: output});
+            },  i * 30);
+            this.timeout.push(to);
+        }
     }
 }

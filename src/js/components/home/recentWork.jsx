@@ -16,8 +16,8 @@ class RecentWork extends Component {
         return (
             <div className="recentworks topspace">
                 <h2 className="section-title"><span>Recent Works</span></h2>
-                <div className="thumbnails recentworks">
-                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="thumbnails">
+                    <div className="single">
                         <Link to={{ pathname: '/profolio', state: { curPage: 'foodhub' }}} className="thumbnail" onClick={()=> this.changePage('profolio')}>
                             <span className="img">
                                 <img src={foodhub} alt="foodhub" />
@@ -29,7 +29,7 @@ class RecentWork extends Component {
                         <h4></h4>
                         <p></p>
                     </div>
-                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div className="single">
                         <Link to={{ pathname: '/profolio', state: { curPage: 'master' }}} className="thumbnail">
                             <span className="img">
                                 <img src={temImage} alt="" />
@@ -41,7 +41,7 @@ class RecentWork extends Component {
                         <h4></h4>
                         <p></p>
                     </div>
-                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div className="single">
                         <a className="thumbnail" href="sidebar-right.html">
                         <span className="img">
                             <img src={temImage} alt="" />

@@ -20,7 +20,6 @@ class Nav extends React.Component{
 
     componentWillUpdate(){
         this.navOffset = this.props.navOffset;
-        console.log(ReactDOM.findDOMNode(this.refs.header));
     }
 
     render(){

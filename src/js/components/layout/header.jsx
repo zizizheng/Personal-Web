@@ -22,14 +22,12 @@ class Header extends React.Component{
     }
 
     render(){
-        if(this.props.curPage !== 'home') window.removeEventListener('scroll', this.handleScroll);
-        else window.addEventListener('scroll', this.handleScroll);
-
         switch(this.props.curPage){
             case 'home':
+                window.addEventListener('scroll', this.handleScroll);
                 return (
                     <header id="header" ref="header" className="home">
-                        <div id="head" ref="head" className="parallax">
+                        <div id="head" ref="head" className="parallax" style={this.state}>
                             <h1 id="logo">
                                 <img className="img-circle" src={myself} alt="personal" />
                                 <span className="title">ZiZi Zheng</span>
@@ -43,9 +41,10 @@ class Header extends React.Component{
                 );
 
             default:
+                window.removeEventListener('scroll', this.handleScroll);
                 return (
                     <header id="header" ref="header">
-                        <div id="head" ref="head" className="parallax text-center" style={this.state}>
+                        <div id="head" ref="head" className="parallax text-center">
                             <h1 className="title">ZiZi Zheng</h1>
                             <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
                             <span className="tagline">

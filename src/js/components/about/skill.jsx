@@ -23,11 +23,11 @@ export default class Skill extends React.Component {
                 this.programSkillList();
                 break;
             case 'music':
-                return (<MusicSKillList />);
+                return this.MusicSKillList();
             default:
                 break;
         }
-        return (<div className="skillRow">{this.showList}</div>);
+        return (<div className="skillRow wrapper">{this.showList}</div>);
     }
 
     webSkillList(){
@@ -122,29 +122,28 @@ export default class Skill extends React.Component {
         });
     }
 
-}
-
-class MusicSKillList extends React.Component{   
-    render(){
+    MusicSKillList(){   
         return (
             <div>
-                <div id="music" >
-                    <div　id="musicDes" className="page-header">
-                        <h3><i>Can't Live Without Music</i></h3>
-                        <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
-                            In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar.
-                            Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
-                        </p>
-                    </div>
-                    <div>
-                        <img id="guitar" src={guitar} alt="I with guitar" />
+                <div id="music" className="wrapper">
+                    <article>
+                        <div>
+                            <h3><i>Can't Live Without Music</i></h3>
+                            <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
+                                In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar.
+                                Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
+                            </p>
+                        </div>
+                    </article>
+                    <div className="guitarPhoto">
+                        <img src={guitar} alt="I with guitar" />
                     </div>
                 </div>
 
                 <SlideShow />
                 
             </div>
-        );
-        
+        );   
     }
 }
+

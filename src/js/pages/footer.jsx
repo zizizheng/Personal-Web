@@ -3,7 +3,7 @@ import React from 'react';
 export default class Footer extends React.Component{
     render(){
         return (
-            <div>
+            <div className="clearfix">
                 <footer id="footer">
                     <div className="follow-me-icons">
                         <a href=""><i className="fa fa-twitter fa-5x"></i></a>

@@ -56,7 +56,6 @@ $navbar-vivid-link-hover-color       : #bd1550;
     margin: 0 auto;
     text-align: center;
     >li {
-        float: none;
         display: inline-block;
         > a {
             color: $navbar-default-link-color;
@@ -83,21 +82,6 @@ $navbar-vivid-link-hover-color       : #bd1550;
 .navbar-default {
     background-color: $navbar-default-bg;
     border-color: $navbar-default-border;
-    
-    .navbar-toggle {
-        border-color: $navbar-default-toggle-border-color;
-        &:hover,
-        &:focus {
-            background-color: $navbar-default-toggle-hover-bg;
-        }
-        .icon-bar {
-            background-color: $navbar-default-toggle-icon-bar-bg;
-        }
-    }
-    .navbar-collapse,
-    .navbar-form {
-        border-color: $navbar-default-border;
-    }
 }
 
 /****************************************************************************************
@@ -113,8 +97,7 @@ $navbar-vivid-link-hover-color       : #bd1550;
     margin-top: -0.37em;
     > li {
         list-style-type: none;
-        > a {
-            cursor: pointer;            
+        > a {           
             padding-top: 5px;
             padding-bottom: 5px;
             color: $navbar-vivid-link-color;
@@ -126,7 +109,6 @@ $navbar-vivid-link-hover-color       : #bd1550;
         }
     }
     >li.active > a {
-        cursor: pointer;
         color: $navbar-vivid-link-hover-color;
         text-shadow: 1px 1px 3px maroon;
     }

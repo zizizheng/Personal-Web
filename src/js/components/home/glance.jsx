@@ -14,15 +14,15 @@ class Glance extends Component {
         return (
             <div className="featured topspace">
                 <h2 className="section-title"><span>Glance</span></h2>
-                <div className="row">
-                    <div className="col-sm-6 col-md-4">
+                <div id="glance" className="wrapper">
+                    <div className="myPhoto">
                         <img src={myself} alt="personal" />
                     </div>
-                    <div className="col-sm-6 col-md-8">
+                    <div className="descripition">
                         <h3 className="lead">My name is ZiZi Zheng<br /></h3>
                         <div className="content">
                             <h4 className="lead">I'm a</h4>
-                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div>
                                 <p className="lead"><strong>Programer</strong> since senior high (JavaScript, Html5, CSS3, C++, C#)</p>
                                 <p className="lead"><strong>Volleyball</strong> lover, usually play wing spiker in game</p>
                                 <p className="lead"><strong>Music</strong> mania, play acoustic and eletric guitar</p>

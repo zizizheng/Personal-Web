@@ -11,7 +11,7 @@ class Intro extends React.Component{
     render(){
         return (
             <div className="intro">
-                <div className="col-md-12">
+                <div>
                     <p className="lead text-muted text-center">
                         Hi, this is my personal page.<br />
                         Self-introduction is presented in 

@@ -7,10 +7,6 @@
 
 #main {
     margin: 50px 0;
-    p {
-        padding: 0;
-        line-height: 2.1875rem;
-    }
     ul > li {
         font-size: 1.25rem;
         margin-left: 5px;
@@ -21,23 +17,42 @@
     }
 }
 
+#glance {
+    display: flex;
+    .myPhoto {
+        padding: 10px;
+        width: 400px;
+    }
+
+    .descripition {
+        padding-left: $between-p-image;
+    }
+
+    .more-link {
+        font-weight: 700;
+        font-style: italic; 
+        color: #000;
+        display: block;
+        width: 100%;
+        text-align: right;
+        &:hover {
+            color:$color-contrast;
+            text-decoration: underline;
+        }
+    }
+}
+
 #profileInAbout {
-    justify-content: center;
-    img {
-        width: 325px;
-        display: inline-block;
-        vertical-align: top;
+    display: flex;
+    .aboutPhoto {
+        width: 330px;
     }
     article {
-        display: inline-block;
         padding-left: $between-p-image;
     }
 }
 
 #skills {
-    article {
-        margin: auto;
-    }
     ul {
         padding-left: 15px;
         margin: 10px 0;
@@ -58,7 +73,6 @@
         color: #f392b4;
         &:hover {
             color: #bd1550;
-            font-weight: 500;
         }
     }
     #skillsList{
@@ -71,22 +85,12 @@
         }
     }
     #music {        
-        div {
-            display: inline;
-        }
-        p {
-            margin: 10px;
-        }
-        h3 {
-            margin: 0;
-        }
-        #musicDes{
-            float: left;
-            width: 65%;   
-        }
-        img {
-            width: 30%;
-            float: right;
+        display: flex;
+        margin-bottom: 30px;
+        .guitarPhoto {
+            img {
+                width: 475px;
+            }
         }
     }
     #slideShow {
@@ -162,6 +166,7 @@
             list-style-type: none;
         }
     }
+    
 }
 
 #contactBlock {
@@ -170,15 +175,12 @@
         height: 180px;
         display: flex;
         justify-content: space-around;
-        p {
-            display: none;
-        }
         img {
             text-align: center;
             width: 100px;
             height: 100px;
             margin-bottom: 20px;
-            transition-property: width, height;
+            transition-property: all;
             transition-duration: 0.2s;
             transition-timing-function: linear;
             &:hover {
@@ -189,14 +191,12 @@
                 animation-duration: 1.5s;
             }
         }
-        div {
-            display: flex;
-        }
     }
 
     .message {
-        text-align: center;
-        margin: 50px 0;
+        padding: 30px 120px;
+        margin-top: 60px;
+        margin-bottom: 100px;
     }
 }
 
@@ -208,7 +208,6 @@
         margin: 20px;
         margin-bottom: 40px;
         text-align: center;
-
         p { 
             margin-top: 10px;
             margin-bottom: 5px;
@@ -221,13 +220,13 @@
     }
 
     aside {
+        padding-left: 0;
         margin-top: 20px;
-        ul {
+        ul, li {
             padding-left: 0;
         }
         li {
             margin-left: 0;
-            padding-left: 0;
         }
     }
 
@@ -248,8 +247,7 @@
         .subtitle {
             border-radius: 13px;
             background-color: #ddd;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin: 20px auto;
             padding: 15px;
             text-align: center;
             font-size: 1.125em;
@@ -260,29 +258,11 @@
     }
 }
 
-
-.more-link {
-    font-weight: 700;
-    color: #000;
-    font-style: italic; 
-    display: block;
-    width: 100%;
-    text-align: right;
-    &:hover {
-        color:$color-contrast;
-    }
-}
-
-
 /*********************************************************************
 
                                 Items
 
 **********************************************************************/
-
-img {
-    max-width: 100%;
-}
 
 // buttons & panels
 .btn {
@@ -313,10 +293,7 @@ img {
     }
 }
 
-.lead {
-    font-weight: 300;
-    font-size: 1.3125rem;
-}
+
 
 
 /*********************************************************************
@@ -398,6 +375,11 @@ img {
     li {
         margin-bottom: 30px;
     }
+    .single {
+        width: 33%;
+        float: left;
+        padding: 0 10px;
+    }
     .details {
         display: block;
         text-align: center;
@@ -429,16 +411,16 @@ img {
         text-indent: 0;
     }
     .seeDetail {
-        position: absolute;
+        position: relative;
         display: block;
         opacity: 0;
         width: 100%;
-        height: 180px;
+        height: 160px;
         background-color: rgba( 255, 255, 255, 0.8);
         transition-property: all;
         transition-duration: 0.55s;
         .more {
-            position: absolute;
+            position: absolute;            
             bottom: 15px;
             right: 0;
             height: 32px;

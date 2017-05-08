@@ -14,9 +14,10 @@ export default class About extends React.Component {
         
         return (
             <main id="main">
-                <div id="profileInAbout" className="container">
-
-                    <img src={goodguy} alt="I'm a good guy" />
+                <div id="profileInAbout" className="container wrapper">
+                    <div className="aboutPhoto">
+                        <img src={goodguy} alt="I'm a good guy" />
+                    </div>
 
                     <article>
                         <header className="page-header">
@@ -35,21 +36,21 @@ export default class About extends React.Component {
                     </article>
                 </div>
                 <div id="skills" className="personal container">
-                <div className="featured topspace">
-                    <h2 className="section-title">
-                        <span>Skills</span>
-                        <ul id="skillsList">
-                            <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Development</a></li>
-                            <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Computer Science</a></li>
-                            <li><a href="#" onClick={(e)=> this.skillClick('music', e)}>Music</a></li>
-                        </ul>
-                    </h2>
+                    <div className="featured topspace">
+                        <h2 className="section-title">
+                            <span>Skills</span>
+                            <ul id="skillsList">
+                                <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Development</a></li>
+                                <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Computer Science</a></li>
+                                <li><a href="#" onClick={(e)=> this.skillClick('music', e)}>Music</a></li>
+                            </ul>
+                        </h2>
 
-                    <article>
-                        <Skill skill={this.state.currentSkill} />
-                    </article>
+                        <article>
+                            <Skill skill={this.state.currentSkill} />
+                        </article>
 
-                </div>
+                    </div>
                 </div>
             </main>
         );
