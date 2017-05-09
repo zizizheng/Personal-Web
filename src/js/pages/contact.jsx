@@ -9,8 +9,11 @@ import gitImage from '../../assets/images/github.png';
 
 export default class Contact extends React.Component {
 
+
+    
     constructor(){
         super();
+        this.messageSpeed = 15;
         this.timeout = [];
         this.state = {
             message: 'Mouse over to see some message about icon',
@@ -81,7 +84,7 @@ export default class Contact extends React.Component {
             to = setTimeout(() => {
                 output += this.message[s][i];                
                 this.setState({message: output});
-            },  i * 30);
+            },  i * this.messageSpeed);
             this.timeout.push(to);
         }
     }

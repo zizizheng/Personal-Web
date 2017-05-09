@@ -6,16 +6,24 @@ export default class Footer extends React.Component{
             <div className="clearfix">
                 <footer id="footer">
                     <div className="follow-me-icons">
-                        <a href=""><i className="fa fa-twitter fa-5x"></i></a>
+                        <a href="https://www.facebook.com/zizi.zheng.1" target="_blank">
+                            <i className="fa fa-facebook-square fa-5x"></i>
+                        </a>
                     </div>
                     <div className="follow-me-icons">
-                        <a href=""><i className="fa fa-dribbble fa-5x"></i></a>
+                        <a href="https://plus.google.com/u/0/111683413001408758628" target="_blank">
+                            <i className="fa fa-google-plus-square fa-5x"></i>
+                        </a>
                     </div>
                     <div className="follow-me-icons">
-                        <a href=""><i className="fa fa-github fa-5x"></i></a>
+                        <a href="https://www.instagram.com/zizi_bartz/" target="_blank">
+                            <i className="fa fa-instagram fa-5x"></i>
+                        </a>
                     </div>
                     <div className="follow-me-icons">
-                        <a href=""><i className="fa fa-facebook fa-5x"></i></a>
+                        <a href="https://github.com/zizizheng" target="_blank">
+                            <i className="fa fa-github-square fa-5x"></i>
+                        </a>
                     </div>
                 </footer>
                 <footer id="underfooter">
