@@ -45,7 +45,7 @@ class Header extends React.Component{
                 return (
                     <header id="header" ref="header">
                         <div id="head" ref="head" className="parallax text-center">
-                            <h1 className="title">ZiZi Zheng</h1>
+                            <h1 className="title h1__margin">ZiZi Zheng</h1>
                             <span className="tagline">A beginner for Web, full of passion for new things<br/></span>
                             <span className="tagline">
                                 <Link to="/contact#respond">z0931752096@gmail.com</Link>

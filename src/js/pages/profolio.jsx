@@ -15,6 +15,8 @@ export default class Profolio extends React.Component {
         if( this.props.location.state ){
             this.changeContent(this.props.location.state.curPage);
         }
+        
+        window.scrollTo(0, 0);
     }
 
     render(){
@@ -23,24 +25,19 @@ export default class Profolio extends React.Component {
             <main id="main">
 
                 <div id="profolio" className="container">
+                    <aside>
+                        <ul ref="list" className="text-right nav-side">
+                            <li ref="foodhub" className="active" >
+                                <a href="" onClick={(e)=>{ this.changeContent('foodhub', e)}}>FoodHub</a>
+                            </li>
+                            <li ref="master">
+                                <a href="" onClick={(e)=>{ this.changeContent('master', e)}}>Master Dissertion</a>
+                            </li>
+                        </ul>
 
-                    <div className="row">
-                        
-                        <aside className="col-lg-2">
-
-                            <ul ref="list" className="text-right nav-side">
-                                <li ref="foodhub" className="active" >
-                                    <a href="" onClick={(e)=>{ this.changeContent('foodhub', e)}}>FoodHub</a>
-                                </li>
-                                <li ref="master">
-                                    <a href="" onClick={(e)=>{ this.changeContent('master', e)}}>Master Dissertion</a>
-                                </li>
-                            </ul>
-
-                        </aside>
-
+                    </aside>
+                    <div id="profolio__content">
                         {this.state.curContent}
-
                     </div>
                 </div>
                 

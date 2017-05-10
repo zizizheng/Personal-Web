@@ -7,7 +7,10 @@ export default class About extends React.Component {
     constructor(){
         super();
         this.state = { currentSkill: 'music'};
-        this.skillClick = this.skillClick.bind(this);
+    }
+
+    componentDidMount(){
+        window.scrollTo(0, 0);
     }
 
     render(){
@@ -21,13 +24,13 @@ export default class About extends React.Component {
 
                     <article>
                         <header className="page-header">
-                        <h1 className="page-title">Who I am ?</h1>
-                            <p className="lead">
+                        <h1 className="page-title h1__margin">Who I am ?</h1>
+                            <p className="lead indent">
                                 I'm ZiZi Zheng (Tsung-Lin Cheng), come from Tainan, Taiwan. <br/>
                                 Have a curious mind about technology. <br/>
                                 Like to try new things and have some fun when learning.
                             </p>
-                            <p className="lead">
+                            <p className="lead indent">
                                 Start learning and developing Web in August, 2016. <br/>
                                 Aim to learn a new programing language and enhance myself.<br/>
                                 Scroll down to know more about <strong>Me</strong> now !
@@ -35,23 +38,7 @@ export default class About extends React.Component {
                         </header>
                     </article>
                 </div>
-                <div id="skills" className="personal container">
-                    <div className="featured topspace">
-                        <h2 className="section-title">
-                            <span>Skills</span>
-                            <ul id="skillsList">
-                                <li><a href="#" onClick={(e)=> this.skillClick('web', e)}>Web Development</a></li>
-                                <li><a href="#" onClick={(e)=> this.skillClick('program', e)}>Computer Science</a></li>
-                                <li><a href="#" onClick={(e)=> this.skillClick('music', e)}>Music</a></li>
-                            </ul>
-                        </h2>
-
-                        <article>
-                            <Skill skill={this.state.currentSkill} />
-                        </article>
-
-                    </div>
-                </div>
+                <Skill />
             </main>
         );
     }
@@ -60,10 +47,10 @@ export default class About extends React.Component {
 
     /* ===== Event ===== */
     
-    skillClick(v, e){
-        e.preventDefault(e);
-        this.setState({ currentSkill: v});
-    }
+    // skillClick(v, e){
+    //     e.preventDefault(e);
+    //     this.setState({ currentSkill: v});
+    // }
 
     /* ===== Event End ===== */
 

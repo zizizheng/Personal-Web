@@ -12,7 +12,7 @@ import Contact from './js/pages/contact';
 
 import store from './js/store';
 
-import './assets/css/bootstrap.min.css';
+// import './assets/css/bootstrap.min.css';
 import './assets/css/styles.css';
 
 const app = document.getElementById('app');

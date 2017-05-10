@@ -23,10 +23,10 @@ class Glance extends Component {
                         <div className="content">
                             <h4 className="lead">I'm a</h4>
                             <div>
-                                <p className="lead"><strong>Programer</strong> since senior high (JavaScript, Html5, CSS3, C++, C#)</p>
-                                <p className="lead"><strong>Volleyball</strong> lover, usually play wing spiker in game</p>
-                                <p className="lead"><strong>Music</strong> mania, play acoustic and eletric guitar</p>
-                                <p className="lead"><strong>Gamer</strong>, and played lots of game since childhood</p>
+                                <p className="lead indent"><strong>Programer</strong> since senior high (JavaScript, Html5, CSS3, C++, C#)</p>
+                                <p className="lead indent"><strong>Volleyball</strong> lover, usually play wing spiker in game</p>
+                                <p className="lead indent"><strong>Music</strong> mania, play acoustic and eletric guitar</p>
+                                <p className="lead indent"><strong>Gamer</strong>, and played lots of game since childhood</p>
                             </div>
                             <Link to='/about#main' className="more-link" onClick={()=> this.changePage('about')}>more about me</Link>
                         </div>

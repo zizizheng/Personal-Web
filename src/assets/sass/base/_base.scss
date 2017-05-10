@@ -7,6 +7,7 @@ body {
     font-family: $font-sans;
     color: $color-default;
     padding: 0;
+    margin: 0;
 }
 
 p {
@@ -66,6 +67,7 @@ h5 {
 a {
     cursor: pointer;
     color: $color-action;
+    text-decoration: none;
     &:hover {
         color: lighten($color-action, 15%);
     }
@@ -77,6 +79,15 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
 }
 
 .lead {
@@ -112,4 +123,12 @@ img {
 .wrapper {
     justify-content: center;
     margin: 0 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }

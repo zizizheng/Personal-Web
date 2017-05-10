@@ -21,7 +21,7 @@
     display: flex;
     .myPhoto {
         padding: 10px;
-        width: 400px;
+        width: 360px;
     }
 
     .descripition {
@@ -55,7 +55,7 @@
 #skills {
     ul {
         padding-left: 15px;
-        margin: 10px 0;
+        margin: 15px 0;
         span {
             @include font-size(0.5);
             padding-left: 15px;
@@ -84,15 +84,6 @@
             
         }
     }
-    #music {        
-        display: flex;
-        margin-bottom: 30px;
-        .guitarPhoto {
-            img {
-                width: 475px;
-            }
-        }
-    }
     #slideShow {
         clear: both;
         $photo-height: 540px;
@@ -100,21 +91,27 @@
         position: relative;
         width: 720px;
         height: $photo-height;
-        margin: auto;
+        margin: 30px auto;
         img {
             width: 100%;
             height: 100%;
         }
+        h4 {
+            color: darkslateblue;
+            padding: 3px;
+            border: 2px solid gray;
+            border-style: inset none;
+        }
         .arrow {
             $symbol-size: 20px;
+            line-height: $symbol-size;
             text-align: center;
             width: 50px;
-            height: $photo-height;
             color: white;
             font-size: $symbol-size;
             display: inline-block;
             position: absolute;
-            padding-top: ($photo-height+$symbol-size)/2;
+            padding: (($photo-height)-($symbol-size))/2 0;
             &:hover {
                 cursor: pointer;
                 background: $color-meta;
@@ -125,6 +122,22 @@
         }
         .leftArrow {
             left: 0%;
+        }
+    }
+    #music {
+        position: relative;
+        
+        article {
+            margin-right: 28%;
+            p {
+                padding: 0 5px;
+            }
+        }
+        #music-profile {
+            top: 55px;
+            position: absolute;
+            width: 280px;
+            right: 0;
         }
     }
     
@@ -142,18 +155,20 @@
         -webkit-tap-highlight-color: #000;
         box-shadow: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
         border-radius: 2px;
-        width: 230px;
-        height: 240px;
-        margin: 10px 20px;
+        width: 220px;
+        min-width: 220px;
+        height: 210px;
+        margin: 10px 30px;
         .title {
             margin: 10px 6px;
         }
         img {
+            float: left;
             width: 45px;
         }
         h3 {
-            display: inline;
             text-align: center;
+            margin: 10px 0 10px 50px;
         }
         hr {
             margin: 3px 0;
@@ -164,6 +179,14 @@
             padding: 0;
             line-height: 1.5em;
             list-style-type: none;
+        }
+    }
+    .space-for-navigate {
+        padding-top: 60px;
+        margin-top: -10px;    
+        &__first {
+            padding-top: 60px;
+            margin-top: -70px;
         }
     }
     
@@ -201,8 +224,11 @@
 }
 
 #profolio {
+    display: flex;
+    justify-content: center;
     p {
-        padding: 0 30px;
+        padding: 0 20px;
+        margin-left: 20px;
     }
     .graphBlock {
         margin: 20px;
@@ -220,6 +246,9 @@
     }
 
     aside {
+        flex: initial;
+        width: 160px;
+        display: block;
         padding-left: 0;
         margin-top: 20px;
         ul, li {
@@ -255,6 +284,12 @@
             font-style: italic;
             opacity: 0.7;
         }
+    }
+
+    &__content {
+        flex: 1;
+        padding: 0 50px;
+        margin-right: 50px;
     }
 }
 
@@ -293,7 +328,14 @@
     }
 }
 
+.h1__margin {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
 
+.indent {
+    padding-left: 12px;
+}
 
 
 /*********************************************************************
@@ -327,8 +369,8 @@
         &:after {
             content: "";
             position: absolute;
-            height: 4px;
-            top: .53em;
+            height: 3px;
+            top: .59em;
             width: 400%;
             border-bottom: 1px solid #ccc;
             border-top: 1px solid #ccc;
@@ -361,7 +403,8 @@
         @include font-size(2.6);
         font-family: $font-special;
         color: $color-action;
-        font-weight: 700;
+        font-weight: 600;
+        margin: 15px 0;
     }
     .content {
         margin-left: 10px;
@@ -372,12 +415,12 @@
 
 .thumbnails {
     padding: 0;
+    display: flex;
     li {
         margin-bottom: 30px;
     }
     .single {
         width: 33%;
-        float: left;
         padding: 0 10px;
     }
     .details {

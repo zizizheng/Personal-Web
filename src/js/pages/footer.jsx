@@ -26,17 +26,9 @@ export default class Footer extends React.Component{
                         </a>
                     </div>
                 </footer>
-                <footer id="underfooter">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12 widget">
-                                <div className="widget-body">
-                                    <p className="text-center">
-                                    Copyright &copy; 2017, ZiZi Zheng&nbsp;&nbsp;&nbsp; Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <footer id="underfooter">  
+                    <p className="text-center">
+                    Copyright &copy; 2017, ZiZi Zheng&nbsp;&nbsp;&nbsp; Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a></p>
                 </footer> 
             </div>
            

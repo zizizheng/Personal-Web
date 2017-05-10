@@ -10,7 +10,7 @@ export default class Foodhub extends React.Component {
 
     render(){
         return (
-            <article className="col-lg-9">
+            <article>
                 <h1 className="title">Foodhub</h1>
                 <h2 className="subtitle">The goal of Foodhub is to manage donations from kind people and deliver to those who needs help.  </h2>
                 <p>Managing donations has been a difficult issue for Foodhub since these are more and more donations coming from everywhere in Taiwan.
@@ -46,7 +46,7 @@ export default class Foodhub extends React.Component {
                 </p>
                 <div className="graphBlock">
                     <p>The login page of the post system</p>
-                    <img src={foodubImg} alt="foodhub system" className="" />
+                    <img src={foodubImg} alt="foodhub system" />
                 </div>
             </div>
         );

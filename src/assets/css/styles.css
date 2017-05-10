@@ -6,7 +6,8 @@ body {
   font-size: 0.9375rem;
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   color: #666666;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 p {
   line-height: 2.1875rem;
@@ -60,7 +61,8 @@ h5 {
 
 a {
   cursor: pointer;
-  color: #bd1550; }
+  color: #bd1550;
+  text-decoration: none; }
   a:hover {
     color: #e93675; }
   a:hover, a:focus, a:active, a:visited {
@@ -69,6 +71,13 @@ a {
 img {
   max-width: 100%;
   height: auto; }
+
+strong {
+  font-weight: bolder; }
+
+.container {
+  width: 1140px;
+  max-width: 100%; }
 
 .lead {
   font-weight: 300;
@@ -99,6 +108,12 @@ img {
 .wrapper {
   justify-content: center;
   margin: 0 10px; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
 
 /*********************************************************************
 
@@ -242,7 +257,7 @@ img {
   display: flex; }
   #glance .myPhoto {
     padding: 10px;
-    width: 400px; }
+    width: 360px; }
   #glance .descripition {
     padding-left: 50px; }
   #glance .more-link {
@@ -265,7 +280,7 @@ img {
 
 #skills ul {
   padding-left: 15px;
-  margin: 10px 0; }
+  margin: 15px 0; }
   #skills ul span {
     font-size: 5px;
     font-size: 0.3125rem;
@@ -290,31 +305,30 @@ img {
     padding: 0px 20px;
     display: inline; }
 
-#skills #music {
-  display: flex;
-  margin-bottom: 30px; }
-  #skills #music .guitarPhoto img {
-    width: 475px; }
-
 #skills #slideShow {
   clear: both;
   text-align: center;
   position: relative;
   width: 720px;
   height: 540px;
-  margin: auto; }
+  margin: 30px auto; }
   #skills #slideShow img {
     width: 100%;
     height: 100%; }
+  #skills #slideShow h4 {
+    color: darkslateblue;
+    padding: 3px;
+    border: 2px solid gray;
+    border-style: inset none; }
   #skills #slideShow .arrow {
+    line-height: 20px;
     text-align: center;
     width: 50px;
-    height: 540px;
     color: white;
     font-size: 20px;
     display: inline-block;
     position: absolute;
-    padding-top: 280px; }
+    padding: 260px 0; }
     #skills #slideShow .arrow:hover {
       cursor: pointer;
       background: #a5a5a5; }
@@ -322,6 +336,18 @@ img {
     right: 0%; }
   #skills #slideShow .leftArrow {
     left: 0%; }
+
+#skills #music {
+  position: relative; }
+  #skills #music article {
+    margin-right: 28%; }
+    #skills #music article p {
+      padding: 0 5px; }
+  #skills #music #music-profile {
+    top: 55px;
+    position: absolute;
+    width: 280px;
+    right: 0; }
 
 #skills .skillRow {
   width: 100%;
@@ -337,16 +363,18 @@ img {
   -webkit-tap-highlight-color: #000;
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
   border-radius: 2px;
-  width: 230px;
-  height: 240px;
-  margin: 10px 20px; }
+  width: 220px;
+  min-width: 220px;
+  height: 210px;
+  margin: 10px 30px; }
   #skills .skillBlock .title {
     margin: 10px 6px; }
   #skills .skillBlock img {
+    float: left;
     width: 45px; }
   #skills .skillBlock h3 {
-    display: inline;
-    text-align: center; }
+    text-align: center;
+    margin: 10px 0 10px 50px; }
   #skills .skillBlock hr {
     margin: 3px 0; }
   #skills .skillBlock ul > li {
@@ -355,6 +383,13 @@ img {
     padding: 0;
     line-height: 1.5em;
     list-style-type: none; }
+
+#skills .space-for-navigate {
+  padding-top: 60px;
+  margin-top: -10px; }
+  #skills .space-for-navigate__first {
+    padding-top: 60px;
+    margin-top: -70px; }
 
 #contactBlock {
   margin: 40px 20px; }
@@ -381,53 +416,58 @@ img {
     margin-top: 60px;
     margin-bottom: 100px; }
 
-#profolio p {
-  padding: 0 30px; }
-
-#profolio .graphBlock {
-  margin: 20px;
-  margin-bottom: 40px;
-  text-align: center; }
-  #profolio .graphBlock p {
-    margin-top: 10px;
-    margin-bottom: 5px;
+#profolio {
+  display: flex;
+  justify-content: center; }
+  #profolio p {
+    padding: 0 20px;
+    margin-left: 20px; }
+  #profolio .graphBlock {
+    margin: 20px;
+    margin-bottom: 40px;
+    text-align: center; }
+    #profolio .graphBlock p {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-style: italic;
+      font-weight: 600; }
+    #profolio .graphBlock img {
+      width: 80%; }
+  #profolio aside {
+    flex: initial;
+    width: 160px;
+    display: block;
+    padding-left: 0;
+    margin-top: 20px; }
+    #profolio aside ul, #profolio aside li {
+      padding-left: 0; }
+    #profolio aside li {
+      margin-left: 0; }
+  #profolio article ul {
+    list-style-position: inside; }
+  #profolio article li {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.6rem; }
+  #profolio article h1 {
+    font-family: Alice, Georgia, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 10px 0; }
+  #profolio article .subtitle {
+    border-radius: 13px;
+    background-color: #ddd;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.125em;
+    font-family: Georgia, serif;
     font-style: italic;
-    font-weight: 600; }
-  #profolio .graphBlock img {
-    width: 80%; }
-
-#profolio aside {
-  padding-left: 0;
-  margin-top: 20px; }
-  #profolio aside ul, #profolio aside li {
-    padding-left: 0; }
-  #profolio aside li {
-    margin-left: 0; }
-
-#profolio article ul {
-  list-style-position: inside; }
-
-#profolio article li {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6rem; }
-
-#profolio article h1 {
-  font-family: Alice, Georgia, serif;
-  font-size: 3rem;
-  text-align: center;
-  margin: 10px 0; }
-
-#profolio article .subtitle {
-  border-radius: 13px;
-  background-color: #ddd;
-  margin: 20px auto;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.125em;
-  font-family: Georgia, serif;
-  font-style: italic;
-  opacity: 0.7; }
+    opacity: 0.7; }
+  #profolio__content {
+    flex: 1;
+    padding: 0 50px;
+    margin-right: 50px; }
 
 /*********************************************************************
 
@@ -456,6 +496,13 @@ img {
   .btn-action:hover, .btn-action:focus, .btn-action:active, .btn-action.active {
     color: #bd1550;
     border-color: #bd1550; }
+
+.h1__margin {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+.indent {
+  padding-left: 12px; }
 
 /*********************************************************************
 
@@ -489,8 +536,8 @@ img {
     .entry-title span:after {
       content: "";
       position: absolute;
-      height: 4px;
-      top: .53em;
+      height: 3px;
+      top: .59em;
       width: 400%;
       border-bottom: 1px solid #ccc;
       border-top: 1px solid #ccc; }
@@ -521,18 +568,19 @@ img {
     font-size: 1.625rem;
     font-family: Alice, Georgia, serif;
     color: #bd1550;
-    font-weight: 700; }
+    font-weight: 600;
+    margin: 15px 0; }
   .featured .content {
     margin-left: 10px; }
 
 /* Section - Recent works */
 .thumbnails {
-  padding: 0; }
+  padding: 0;
+  display: flex; }
   .thumbnails li {
     margin-bottom: 30px; }
   .thumbnails .single {
     width: 33%;
-    float: left;
     padding: 0 10px; }
   .thumbnails .details {
     display: block;

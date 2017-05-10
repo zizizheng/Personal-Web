@@ -1,5 +1,6 @@
 import React from 'react';
 import SlideShow from './slideShow';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import htmlImage from '../../../assets/images/html5.png';
 import cssImage from '../../../assets/images/css3.png';
@@ -8,26 +9,36 @@ import toolImage from '../../../assets/images/toolkit.png';
 import guitar from '../../../assets/images/guitar.jpg';
 
 export default class Skill extends React.Component {
-    constructor(props){
-        super(props);
-        this.showList = [];
+
+    componentDidMount(){
+        console.log(this.refs);
     }
 
     render(){    
-        this.showList = [];
-        switch( this.props.skill ){
-            case 'web':
-                this.webSkillList();
-                break;
-            case 'program':
-                this.programSkillList();
-                break;
-            case 'music':
-                return this.MusicSKillList();
-            default:
-                break;
-        }
-        return (<div className="skillRow wrapper">{this.showList}</div>);
+        return (
+            <div id="skills" className="personal container">
+                <div className="featured topspace">
+                    <h2 className="section-title">
+                        <span>Skills</span>
+                        <ul id="skillsList">
+                            <li><Link to="/about#web">Web Development</Link></li>
+                            <li><Link to="/about#cs">Computer Science</Link></li>
+                            <li><Link to="/about#music">Music</Link></li>
+                        </ul>
+                    </h2>
+                
+                    <h3 id="web" ref="web" className="space-for-navigate__first"><i>Skills About Front End Web Development</i></h3>
+                    <div className="skillRow wrapper">{this.webSkillList()}</div>
+
+                    <h3 id="cs" ref="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3>          
+                    <div className="skillRow wrapper">{this.programSkillList()}</div>
+
+                    
+                    <div className="skillRow wrapper">{this.MusicSKillList()}</div>
+                </div>
+            </div>
+        
+        );
     }
 
     webSkillList(){
@@ -57,8 +68,9 @@ export default class Skill extends React.Component {
                 content: ['Git', 'Webpack', 'Angular-cli', 'RESTful API Design', 'Chrome Developer Tools']
             }
         ];
+        let content = [];
         [...webList].map((skill, index)=> {
-            this.showList.push(
+            content.push(
                 <div className="skillBlock" key={index}>
                     <div className="title">
                         <img src={skill.src} alt={skill.alt}/>
@@ -73,6 +85,7 @@ export default class Skill extends React.Component {
             );
             return null;
         });
+        return content;
     }
 
     programSkillList(){
@@ -99,6 +112,7 @@ export default class Skill extends React.Component {
                 sub: ['', '', '', '']
             }
         ];
+        let content = [];
 
         [...programList].map((skill, index)=> {
             let items = [];
@@ -106,7 +120,7 @@ export default class Skill extends React.Component {
                 let c = skill.content[i];
                 items.push(<li key={c+'-'+i}>{c}<span>{skill.sub[i]}</span></li>);
             }
-            this.showList.push (
+            content.push (
                 <div className="skillBlock" key={index}>
                     <div className="title">
                         <img src={skill.src} alt={skill.alt}/>
@@ -120,28 +134,25 @@ export default class Skill extends React.Component {
             );
             return null;
         });
+        return content;
     }
 
     MusicSKillList(){   
         return (
-            <div>
-                <div id="music" className="wrapper">
-                    <article>
-                        <div>
-                            <h3><i>Can't Live Without Music</i></h3>
-                            <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
-                                In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar.
-                                Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
-                            </p>
-                        </div>
-                    </article>
-                    <div className="guitarPhoto">
-                        <img src={guitar} alt="I with guitar" />
-                    </div>
+            <div id="music" ref="music" className="wrapper space-for-navigate">     
+                <article>
+                    <h3><i>Can't Live Without Music</i></h3>
+                    <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
+                        In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar.
+                        Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
+                    </p>
+                </article>
+                
+                <div id="music-profile">
+                    <img src={guitar} alt="I with my guitar" />    
                 </div>
 
                 <SlideShow />
-                
             </div>
         );   
     }

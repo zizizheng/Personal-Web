@@ -1,11 +1,12 @@
 import React from 'react';
 import sound from '../../../assets/images/band_photo/sound.jpg';
 import coffee from '../../../assets/images/band_photo/coffee.jpg';
+import logo from '../../../assets/images/band_photo/logo.png'
 
 export default class SlideShow extends React.Component {
     constructor(){
         super();
-        this.photos = [ sound, coffee ];
+        this.photos = [ sound, coffee, logo ];
         this.state = { src: this.photos[0]};
         this.index = 0;
         this.photoClick = this.photoClick.bind(this);
@@ -13,6 +14,7 @@ export default class SlideShow extends React.Component {
     render(){
         return (
             <div id="slideShow">
+                <h4><i>Barpretender's Photos</i></h4>
                 <img src={this.state.src} alt="band photos" />
                 <div className="arrow leftArrow" onClick={()=>this.photoClick(-1)}>&#10094;</div>
                 <div className="arrow rightArrow" onClick={()=>this.photoClick(1)}>&#10095;</div>

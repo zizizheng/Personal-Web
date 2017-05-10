@@ -9,7 +9,9 @@ import gitImage from '../../assets/images/github.png';
 
 export default class Contact extends React.Component {
 
-
+    componentDidMount(){
+        window.scrollTo(0, 0);
+    }
     
     constructor(){
         super();
