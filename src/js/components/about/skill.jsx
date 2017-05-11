@@ -2,11 +2,14 @@ import React from 'react';
 import SlideShow from './slideShow';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import htmlImage from '../../../assets/images/html5.png';
-import cssImage from '../../../assets/images/css3.png';
-import jsImage from '../../../assets/images/javascript.png';
-import toolImage from '../../../assets/images/toolkit.png';
+import htmlImage from '../../../assets/images/icons/html5.png';
+import cssImage from '../../../assets/images/icons/css3.png';
+import jsImage from '../../../assets/images/icons/javascript.png';
+import broswer from '../../../assets/images/icons/browser.png';
 import guitar from '../../../assets/images/guitar.jpg';
+import laptop from '../../../assets/images/icons/laptop.png';
+import microchip from '../../../assets/images/icons/microchip.png';
+import virus from '../../../assets/images/icons/virus.png';
 
 export default class Skill extends React.Component {
 
@@ -30,10 +33,9 @@ export default class Skill extends React.Component {
                     <h3 id="web" ref="web" className="space-for-navigate__first"><i>Skills About Front End Web Development</i></h3>
                     <div className="skillRow wrapper">{this.webSkillList()}</div>
 
-                    <h3 id="cs" ref="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3>          
+                    <h3 id="cs" ref="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3> 
                     <div className="skillRow wrapper">{this.programSkillList()}</div>
 
-                    
                     <div className="skillRow wrapper">{this.MusicSKillList()}</div>
                 </div>
             </div>
@@ -63,9 +65,10 @@ export default class Skill extends React.Component {
             },
             {
                 title: 'Others',
-                src: toolImage,
+                src: broswer,
                 alt: 'toolkit icon',
-                content: ['Git', 'Webpack', 'Angular-cli', 'RESTful API Design', 'Chrome Developer Tools']
+                content: ['Git', 'Webpack', 'Angular-cli', 'RESTful API Design', 'Chrome Developer Tools'],
+                author: 'Icons made by Freepik http://www.flaticon.com is licensed by CC 3.0 BY'
             }
         ];
         let content = [];
@@ -73,7 +76,7 @@ export default class Skill extends React.Component {
             content.push(
                 <div className="skillBlock" key={index}>
                     <div className="title">
-                        <img src={skill.src} alt={skill.alt}/>
+                        <img src={skill.src} alt={skill.alt} />
                         <h3>{skill.title}</h3>
                     </div>
                     <hr />
@@ -92,24 +95,27 @@ export default class Skill extends React.Component {
         let programList = [
             {
                 title: 'Language',
-                src: '',
+                src: laptop,
                 alt: 'language icon',
                 content: ['C#', 'Xaml', 'Java', 'Xml', 'C / C++'],
-                sub: ['WPF', 'WPF', 'Android App', 'Android App', '']
+                sub: ['WPF', 'WPF', 'Android App', 'Android App', ''],
+                author: 'Icons made by Freepik from http://www.flaticon.com is licensed by CC 3.0 BY'
             },
             {
                 title: 'Hardware',
-                src: '',
+                src: microchip,
                 alt: 'hardware icon',
                 content: ['Arduino', 'Raspberry Pi', 'Kinect', 'Xtion Pro Live'],
-                sub: ['Uno', '2 & 3', '1 & 2', '']
+                sub: ['Uno', '2 & 3', '1 & 2', ''],
+                author: 'Icons made by Pixel perfect from http://www.flaticon.com is licensed by CC 3.0 BY'
             },
             {
                 title: 'Others',
-                src: '',
+                src: virus,
                 alt: 'others icon',
                 content: ['UML', 'OpenCV', 'EmguCV', 'MatLab'],
-                sub: ['', '', '', '']
+                sub: ['', '', '', ''],
+                author: 'Icons made by Vectors Market http://www.flaticon.com is licensed by CC 3.0 BY'
             }
         ];
         let content = [];
@@ -123,7 +129,7 @@ export default class Skill extends React.Component {
             content.push (
                 <div className="skillBlock" key={index}>
                     <div className="title">
-                        <img src={skill.src} alt={skill.alt}/>
+                        <img src={skill.src} alt={skill.alt} title={skill.author}/>
                         <h3>{skill.title}</h3>
                     </div>
                     <hr />
