@@ -241,6 +241,24 @@
             margin-left: 0;
         }
     }
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 23%;
+            padding: 10px;
+            margin: 20px;
+        }
+        h5 {
+            margin: 10px 0;
+        }
+    }
     article {
         ul {
             list-style-position: inside;
@@ -297,11 +315,6 @@
         img {
             width: 80%;
         }
-    }
-    .detailBlock {
-        display: flex;
-        margin: 10px 20px;
-        border: 1px solid red;
     }
 }
 

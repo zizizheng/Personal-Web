@@ -115,6 +115,35 @@ strong {
 .text-right {
   text-align: right; }
 
+.shadow {
+  position: relative;
+  background: white;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  padding: 2em 1.5em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.5;
+  margin: 60px auto; }
+  .shadow::before, .shadow::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    transform: rotate(-3deg); }
+  .shadow::after {
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto; }
+  .shadow:hover {
+    box-shadow: 0 0 12px 4px lightgrey; }
+
 /*********************************************************************
 
                                 Navbar
@@ -438,6 +467,20 @@ strong {
       padding-left: 0; }
     #profolio aside li {
       margin-left: 0; }
+  #profolio section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center; }
+    #profolio section p {
+      padding: 0;
+      margin: 0; }
+    #profolio section div {
+      width: 23%;
+      padding: 10px;
+      margin: 20px; }
+    #profolio section h5 {
+      margin: 10px 0; }
   #profolio article ul {
     list-style-position: inside; }
   #profolio article li {
@@ -484,10 +527,6 @@ strong {
       font-weight: 600; }
     #profolio .graphBlock img {
       width: 80%; }
-  #profolio .detailBlock {
-    display: flex;
-    margin: 10px 20px;
-    border: 1px solid red; }
 
 /*********************************************************************
 

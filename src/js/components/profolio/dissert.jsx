@@ -9,6 +9,16 @@ import xtion_m from '../../../assets/images/profilio/dissert/xtion_m.jpg';
 import raspberry_m from '../../../assets/images/profilio/dissert/raspberry_m.jpg';
 import wpf_m from '../../../assets/images/profilio/dissert/wpf_m.png';
 import filezilla_m from '../../../assets/images/profilio/dissert/filezilla_m.jpg';
+import kinect from '../../../assets/images/profilio/dissert/kinect.png';
+import openni from '../../../assets/images/profilio/dissert/openni.png';
+import nite from '../../../assets/images/profilio/dissert/nite.png';
+import opencv from '../../../assets/images/profilio/dissert/opencv.png';
+import debian from '../../../assets/images/profilio/dissert/debian.png';
+import kinectsdk from '../../../assets/images/profilio/dissert/kinectsdk.png';
+import c from '../../../assets/images/profilio/dissert/c.png';
+import c_plusplus from '../../../assets/images/profilio/dissert/c_plusplus.png';
+import c_sharp from '../../../assets/images/profilio/dissert/c_sharp.png';
+
 
 class Dissert extends Component {
     showImg = [
@@ -40,7 +50,7 @@ class Dissert extends Component {
     Architecture() {
         return (
             <div>
-                <h3><i>Architecture</i></h3>
+                <h2 className="section-title"><span>Architecture</span></h2>
                 <img src={archi} alt="ITETS architecture" />
                 <p className="topspace">ITETS is composed of three subsystems:</p>
                 <ul>
@@ -74,27 +84,64 @@ class Dissert extends Component {
     Details() {
         return (
             <div>
-                <h3><i>Development Details</i></h3>
-                <div className="detailBlock">
-                    <img src={xtion_m} alt="xtion meddium" />
-                    <p>
-                        blalala
-                        slslldaskkd;asd
-                        as;ldkopwepaskfsdfjsdlfl
-                    </p>
-                </div>
-                <div className="detailBlock">
-                    <img src={raspberry_m} alt="raspberry" />
-                    <p></p>
-                </div>
-                <div className="detailBlock">
-                    <img src={wpf_m} alt="wpf" />
-                    <p></p>
-                </div>
-                <div className="detailBlock">
-                    <img src={filezilla_m} alt="filezilla" />
-                    <p></p>
-                </div>
+                <h2 className="section-title"><span>Environment Details</span></h2>
+                <h3><i>Hardware</i></h3>
+                <section>
+                    <div className="shadow">
+                        <img src={xtion_m} alt="xtion meddium" />
+                        <p>Xtion Pro Live</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={kinect} alt="kinect" />
+                        <p>Kinect v1</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={raspberry_m} alt="raspberry" />
+                        <p>Raspbery PI 3</p>
+                    </div>
+                </section>
+                <h3><i>Software</i></h3>
+                <section>
+                    <div className="shadow">
+                        <img src={openni} alt="openni" />
+                        <p>OpenNI (SDK 2)</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={nite} alt="nite" />
+                        <p>NiTE (Middleware)</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={debian} alt="debian" />
+                        <p>Debian (OS)</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={opencv} alt="opencv" />
+                        <p>OpenCV</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={filezilla_m} alt="filezilla" />
+                        <p>FileZilla Server</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={kinectsdk} alt="kinect sdk" />
+                        <p>Kinect SDK</p>
+                    </div>
+                </section>
+                <h3><i>Language</i></h3>
+                <section>
+                    <div className="shadow">
+                        <img src={c} alt="C" />
+                        <p>C</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={c_plusplus} alt="C++" />
+                        <p>C++</p>
+                    </div>
+                    <div className="shadow">
+                        <img src={c_sharp} alt="C#" />
+                        <p>C#</p>
+                    </div>
+                </section>
             </div>
         );
     }
