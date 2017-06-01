@@ -275,7 +275,7 @@ strong {
 **********************************************************************/
 #main {
   margin: 50px 0; }
-  #main ul > li {
+  #main li {
     font-size: 1.25rem;
     margin-left: 5px;
     padding-left: 10px; }
@@ -449,6 +449,7 @@ strong {
   display: flex;
   justify-content: center; }
   #profolio p {
+    font-size: 1rem;
     padding: 0 20px;
     margin-left: 20px; }
   #profolio h3 {
@@ -481,12 +482,16 @@ strong {
       margin: 20px; }
     #profolio section h5 {
       margin: 10px 0; }
-  #profolio article ul {
+  #profolio article ul,
+  #profolio article ol {
     list-style-position: inside; }
   #profolio article li {
     font-size: 15px;
     font-size: 0.9375rem;
-    line-height: 1.6rem; }
+    line-height: 1.6rem;
+    font-weight: bold; }
+    #profolio article li > p {
+      font-weight: normal; }
   #profolio article h1 {
     font-family: Alice, Georgia, serif;
     font-size: 3rem;
@@ -509,6 +514,12 @@ strong {
     flex: 1;
     padding: 0 50px;
     margin-right: 50px; }
+  #profolio .thumbnail {
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 10px; }
   #profolio #showcase {
     position: fixed;
     width: 275px;
@@ -662,7 +673,8 @@ strong {
     position: relative;
     width: 100%;
     height: 160px;
-    margin: 0 0 20px; }
+    margin: 0 0 20px;
+    background-color: #eec07a; }
   .thumbnail .title {
     text-transform: uppercase;
     margin: 0 2em;

@@ -8,7 +8,7 @@ export default class Profolio extends React.Component {
 
     constructor() {
         super();
-        this.state = { curContent: <Dissert /> };
+        this.state = { curContent: <Foodhub /> };
         this.curSelect = 'foodhub';
     }
 
@@ -16,7 +16,6 @@ export default class Profolio extends React.Component {
         if (this.props.location.state) {
             this.changeContent(this.props.location.state.curPage);
         }
-
         window.scrollTo(0, 0);
     }
 
@@ -28,11 +27,11 @@ export default class Profolio extends React.Component {
                 <div id="profolio" className="container">
                     <aside>
                         <ul ref="list" className="text-right nav-side">
-                            <li ref="foodhub" className="active" >
+                            <li ref="foodhub" className="active">
                                 <a href="" onClick={(e) => { this.changeContent('foodhub', e) }}>FoodHub</a>
                             </li>
-                            <li ref="master">
-                                <a href="" onClick={(e) => { this.changeContent('master', e) }}>Master Dissertion</a>
+                            <li ref="dissertion">
+                                <a href="" onClick={(e) => { this.changeContent('dissertion', e) }}>Master Dissertion</a>
                             </li>
                         </ul>
 
@@ -57,7 +56,7 @@ export default class Profolio extends React.Component {
                 case 'foodhub':
                     this.setState({ curContent: <Foodhub class="animated fadeIn" /> });
                     break;
-                case 'master':
+                case 'dissertion':
                     this.setState({ curContent: <Dissert class="animated fadeIn" /> });
                     break;
                 default:
