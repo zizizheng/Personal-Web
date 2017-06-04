@@ -144,6 +144,12 @@ strong {
   .shadow:hover {
     box-shadow: 0 0 12px 4px lightgrey; }
 
+.hide_content {
+  opacity: 0; }
+
+.show_content {
+  opacity: 1; }
+
 /*********************************************************************
 
                                 Navbar
@@ -279,6 +285,8 @@ strong {
     font-size: 1.25rem;
     margin-left: 5px;
     padding-left: 10px; }
+  #main p {
+    letter-spacing: 0.06rem; }
   #main .container {
     margin: 20px auto; }
 
@@ -641,7 +649,8 @@ strong {
     font-weight: 600;
     margin: 15px 0; }
   .featured .content {
-    margin-left: 10px; }
+    margin-left: 10px;
+    margin-top: 25px; }
 
 /* Section - Recent works */
 .thumbnails {
@@ -735,7 +744,7 @@ strong {
 
 #underfooter {
   background: #191919;
-  padding: 15px 0;
+  padding: 7px 0;
   color: #777;
   font-size: 12px; }
   #underfooter a {

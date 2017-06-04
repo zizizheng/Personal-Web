@@ -13,11 +13,11 @@ import virus from '../../../assets/images/icons/virus.png';
 
 export default class Skill extends React.Component {
 
-    componentDidMount(){
+    componentDidMount() {
         console.log(this.refs);
     }
 
-    render(){    
+    render() {
         return (
             <div id="skills" className="personal container">
                 <div className="featured topspace">
@@ -29,21 +29,21 @@ export default class Skill extends React.Component {
                             <li><Link to="/about#music">Music</Link></li>
                         </ul>
                     </h2>
-                
-                    <h3 id="web" ref="web" className="space-for-navigate__first"><i>Skills About Front End Web Development</i></h3>
+
+                    <h3 id="web" className="space-for-navigate__first"><i>Skills About Front End Web Development</i></h3>
                     <div className="skillRow wrapper">{this.webSkillList()}</div>
 
-                    <h3 id="cs" ref="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3> 
+                    <h3 id="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3>
                     <div className="skillRow wrapper">{this.programSkillList()}</div>
 
                     <div className="skillRow wrapper">{this.MusicSKillList()}</div>
                 </div>
             </div>
-        
+
         );
     }
 
-    webSkillList(){
+    webSkillList() {
         let webList = [
             {
                 title: 'Html',
@@ -72,7 +72,7 @@ export default class Skill extends React.Component {
             }
         ];
         let content = [];
-        [...webList].map((skill, index)=> {
+        [...webList].map((skill, index) => {
             content.push(
                 <div className="skillBlock" key={index}>
                     <div className="title">
@@ -80,9 +80,9 @@ export default class Skill extends React.Component {
                         <h3>{skill.title}</h3>
                     </div>
                     <hr />
-                    <ul>{[...skill.content].map((c, index) =>{
-                            return (<li key={c + index}>{c}</li>);
-                        })}
+                    <ul>{[...skill.content].map((c, index) => {
+                        return (<li key={c + index}>{c}</li>);
+                    })}
                     </ul>
                 </div>
             );
@@ -91,7 +91,7 @@ export default class Skill extends React.Component {
         return content;
     }
 
-    programSkillList(){
+    programSkillList() {
         let programList = [
             {
                 title: 'Language',
@@ -120,16 +120,16 @@ export default class Skill extends React.Component {
         ];
         let content = [];
 
-        [...programList].map((skill, index)=> {
+        [...programList].map((skill, index) => {
             let items = [];
-            for(let i = 0; i < skill.content.length; i++){
+            for (let i = 0; i < skill.content.length; i++) {
                 let c = skill.content[i];
-                items.push(<li key={c+'-'+i}>{c}<span>{skill.sub[i]}</span></li>);
+                items.push(<li key={c + '-' + i}>{c}<span>{skill.sub[i]}</span></li>);
             }
-            content.push (
+            content.push(
                 <div className="skillBlock" key={index}>
                     <div className="title">
-                        <img src={skill.src} alt={skill.alt} title={skill.author}/>
+                        <img src={skill.src} alt={skill.alt} title={skill.author} />
                         <h3>{skill.title}</h3>
                     </div>
                     <hr />
@@ -143,9 +143,9 @@ export default class Skill extends React.Component {
         return content;
     }
 
-    MusicSKillList(){   
+    MusicSKillList() {
         return (
-            <div id="music" ref="music" className="wrapper space-for-navigate">     
+            <div id="music" className="wrapper space-for-navigate">
                 <article>
                     <h3><i>Can't Live Without Music</i></h3>
                     <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
@@ -153,14 +153,14 @@ export default class Skill extends React.Component {
                         Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
                     </p>
                 </article>
-                
+
                 <div id="music-profile">
-                    <img src={guitar} alt="I with my guitar" />    
+                    <img src={guitar} alt="I with my guitar" />
                 </div>
 
                 <SlideShow />
             </div>
-        );   
+        );
     }
 }
 

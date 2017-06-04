@@ -7,7 +7,7 @@ import wpf from '../../../assets/images/profilio/dissert/wpf.png';
 import filezilla from '../../../assets/images/profilio/dissert/filezilla.png';
 import xtion_m from '../../../assets/images/profilio/dissert/xtion_m.jpg';
 import raspberry_m from '../../../assets/images/profilio/dissert/raspberry_m.jpg';
-import wpf_m from '../../../assets/images/profilio/dissert/wpf_m.png';
+// import wpf_m from '../../../assets/images/profilio/dissert/wpf_m.png';
 import filezilla_m from '../../../assets/images/profilio/dissert/filezilla_m.jpg';
 import kinect from '../../../assets/images/profilio/dissert/kinect.png';
 import openni from '../../../assets/images/profilio/dissert/openni.png';

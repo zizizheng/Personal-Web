@@ -8,8 +8,11 @@ export default class Profolio extends React.Component {
 
     constructor() {
         super();
-        this.state = { curContent: <Foodhub /> };
-        this.curSelect = 'foodhub';
+        this.state = {
+            curContent: '',
+            curSelect: ''
+        };
+
     }
 
     componentDidMount() {
@@ -17,6 +20,7 @@ export default class Profolio extends React.Component {
             this.changeContent(this.props.location.state.curPage);
         }
         window.scrollTo(0, 0);
+        this.changeContent('foodhub');
     }
 
     render() {
@@ -27,10 +31,10 @@ export default class Profolio extends React.Component {
                 <div id="profolio" className="container">
                     <aside>
                         <ul ref="list" className="text-right nav-side">
-                            <li ref="foodhub" className="active">
+                            <li ref="foodhub" className={this.state.curSelect === 'foodhub' ? 'active' : ''}>
                                 <a href="" onClick={(e) => { this.changeContent('foodhub', e) }}>FoodHub</a>
                             </li>
-                            <li ref="dissertion">
+                            <li ref="dissertion" className={this.state.curSelect === 'dissertion' ? 'active' : ''}>
                                 <a href="" onClick={(e) => { this.changeContent('dissertion', e) }}>Master Dissertion</a>
                             </li>
                         </ul>
@@ -47,11 +51,9 @@ export default class Profolio extends React.Component {
 
     changeContent(v, e) {
         if (e) e.preventDefault(e);
-        if (v === this.curSelect) return;
+        if (v === this.state.curSelect) return;
         else {
-            ReactDOM.findDOMNode(this.refs[this.curSelect]).removeAttribute('class');
-            ReactDOM.findDOMNode(this.refs[v]).setAttribute('class', 'active');
-            this.curSelect = v;
+            this.setState({ curSelect: v });
             switch (v) {
                 case 'foodhub':
                     this.setState({ curContent: <Foodhub class="animated fadeIn" /> });

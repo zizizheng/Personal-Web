@@ -8,8 +8,8 @@ import itets from '../../../assets/images/profilio/itets.png';
 
 class RecentWork extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.changePage = this.changePage.bind(this);
     }
 
@@ -17,7 +17,7 @@ class RecentWork extends Component {
         return (
             <div className="recentworks topspace">
                 <h2 className="section-title"><span>Recent Works</span></h2>
-                <div className="thumbnails" onClick={() => this.changePage('profolio')}>
+                <div className={this.props.style + " thumbnails"} onClick={() => this.changePage('profolio')}>
                     <div className="single">
                         <Link to={{ pathname: '/profolio', state: { curPage: 'foodhub' } }} className="thumbnail">
                             <span className="img">
