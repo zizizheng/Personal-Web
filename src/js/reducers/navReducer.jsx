@@ -9,13 +9,13 @@ const initialState = {
 const bigHeader = '467';
 const smallHeader = '181';
 
-export default function navReducer(state = initialState, action){
-    switch(action.type){
+export default function navReducer(state = initialState, action) {
+    switch (action.type) {
         case CHANGE_PAGE:
-            console.log('dispatch page success');
+            // console.log('dispatch page success');
             // console.log({ ...state, curPage: action.name });
             return { ...state, curPage: action.name, navOffset: (action.name === 'home' ? bigHeader : smallHeader) };
-        default: 
+        default:
             return state;
     }
 }

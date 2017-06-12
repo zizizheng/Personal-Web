@@ -39,3 +39,21 @@
 .show_content {
     opacity: 1;
 }
+
+@keyframes arrow {
+    0% {
+        text-shadow: 0px 0px 5px lightgray;
+    }
+    25% {
+        text-shadow: 0px 0px 15px lightgray;
+    }
+    50% {
+        text-shadow: 0px 0px 25px lightgray;
+    }
+    75% {
+        text-shadow: 0px 0px 35px lightgray;
+    }
+    100% {
+        text-shadow: 0px 0px 45px lightgray;
+    }
+}

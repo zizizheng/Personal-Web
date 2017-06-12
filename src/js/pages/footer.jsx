@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default class Footer extends React.Component{
-    render(){
+export default class Footer extends React.Component {
+    render() {
         return (
             <div className="clearfix">
                 <footer id="footer">
@@ -26,13 +26,12 @@ export default class Footer extends React.Component{
                         </a>
                     </div>
                 </footer>
-                <footer id="underfooter">  
+                <footer id="underfooter">
                     <p className="text-center">
-                    Copyright &copy; 2017, ZiZi Zheng&nbsp;&nbsp;&nbsp; Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a></p>
-                </footer> 
+                        Copyright &copy; 2017, ZiZi Zheng&nbsp;&nbsp;&nbsp; Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a></p>
+                </footer>
             </div>
-           
+
         );
     }
-}  
-  
+}

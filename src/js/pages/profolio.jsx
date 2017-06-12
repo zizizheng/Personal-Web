@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Foodhub from '../components/profolio/foodhub';
 import Dissert from '../components/profolio/dissert';

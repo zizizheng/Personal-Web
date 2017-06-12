@@ -25,10 +25,9 @@ export default class Home extends React.Component {
     }
 
 
-    componentWillMount() {
+    componentWillUnmount() {
         window.removeEventListener('scroll', this.onScroll);
     }
-
 
     render() {
         return (

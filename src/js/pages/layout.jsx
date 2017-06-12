@@ -3,14 +3,16 @@ import { connect } from 'react-redux';
 
 import Nav from '../components/layout/nav';
 import Header from '../components/layout/header';
+import ToTop from '../components/layout/to-top';
 
-class Layout extends React.Component{
+class Layout extends React.Component {
 
-    render(){
+    render() {
         return (
             <div>
                 <Header />
                 <Nav />
+                <ToTop />
             </div>
         );
     }

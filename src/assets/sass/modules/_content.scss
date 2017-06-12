@@ -97,11 +97,9 @@
         h4 {
             color: darkslateblue;
             padding: 3px;
-            border: 2px solid gray;
-            border-style: inset none;
         }
         .arrow {
-            $symbol-size: 20px;
+            $symbol-size: 24px;
             line-height: $symbol-size;
             text-align: center;
             width: 50px;
@@ -110,9 +108,14 @@
             display: inline-block;
             position: absolute;
             padding: (($photo-height)-($symbol-size))/2 0;
+            transition: font-size 1s;
             &:hover {
                 cursor: pointer;
-                background: $color-meta;
+                font-size: 36px;
+                animation-name: arrow;
+                animation-duration: 0.8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease;
             }
         }
         .rightArrow {
@@ -331,6 +334,31 @@
         img {
             width: 80%;
         }
+    }
+}
+
+#to-top {
+    display: flex;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    opacity: 0.8;
+    border-radius: 30%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: border-radius 0.5s;
+    &:hover {
+        border-radius: 70%;
+    }
+    img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        animation-duration: 1s;
     }
 }
 

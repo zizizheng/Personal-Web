@@ -85,7 +85,7 @@ function Architecture() {
                 <li>
                     <strong>Storage: </strong>
                     <p>
-                        A server is built on a PC as the remote database by using <i>FileZilla Server <img src={filezilla} /></i>. All the motion data, modules and information in the proposed system would be stored in the server. Besides, Transformer can process and transform image streams into specific data set for ProTI, and it will be done on the server side.
+                        A server is built on a PC as the remote database by using <i>FileZilla Server <img src={filezilla} alt="filezilla" /></i>. All the motion data, modules and information in the proposed system would be stored in the server. Besides, Transformer can process and transform image streams into specific data set for ProTI, and it will be done on the server side.
 
                     </p>
                 </li>

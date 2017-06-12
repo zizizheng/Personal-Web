@@ -3,33 +3,33 @@
                                 Navbar
 
 **********************************************************************/
+
 @import '../mixins.scss';
-
 // Navbar settings
-$navbar-font                         : "Open sans", Helvetica, Arial, sans-serif;
-$navbar-font-weight                  : 300;
-$navbar-font-transform               : uppercase;
-
-$navbar-default-link-color           : #454545;
-$navbar-default-link-hover-color     : #000;
-$navbar-default-link-active-color    : #000;
-$navbar-default-link-hover-bg        : #eee;
-$navbar-default-link-hover-bg-sub    : #eee;
-$navbar-default-link-active-bg       : #fff;
-$navbar-default-toggle-border-color  : $color-default;
-$navbar-default-toggle-hover-bg      : #fff;
-$navbar-default-toggle-icon-bar-bg   : $color-contrast;
-$navbar-default-border               : #ccc;
-$navbar-default-bg                   : #fff;
-
-$navbar-vivid-link-color             : lighten( #bd1550, 35% );
-$navbar-vivid-link-hover-color       : #bd1550;
-
+$navbar-font: "Open sans",
+Helvetica,
+Arial,
+sans-serif;
+$navbar-font-weight: 300;
+$navbar-font-transform: uppercase;
+$navbar-default-link-color: #454545;
+$navbar-default-link-hover-color: #000;
+$navbar-default-link-active-color: #000;
+$navbar-default-link-hover-bg: #eee;
+$navbar-default-link-hover-bg-sub: #eee;
+$navbar-default-link-active-bg: #fff;
+$navbar-default-toggle-border-color: $color-default;
+$navbar-default-toggle-hover-bg: #fff;
+$navbar-default-toggle-icon-bar-bg: $color-contrast;
+$navbar-default-border: #ccc;
+$navbar-default-bg: #fff;
+$navbar-vivid-link-color: lighten( #bd1550, 35%);
+$navbar-vivid-link-hover-color: #bd1550;
 // Base class
 .navbar {
     position: block;
     border-width: 1px 0;
-    border-radius: 0;    
+    border-radius: 0;
     width: 100%;
     padding: 0;
     background-color: white;
@@ -45,8 +45,8 @@ $navbar-vivid-link-hover-color       : #bd1550;
 .nav-container {
     border: 1px solid #ccc;
     padding: 15px 0;
-
 }
+
 .navbar-list {
     font-family: $navbar-font;
     font-weight: $navbar-font-weight;
@@ -57,22 +57,17 @@ $navbar-vivid-link-hover-color       : #bd1550;
     text-align: center;
     >li {
         display: inline-block;
-        > a {
+        >a {
             color: $navbar-default-link-color;
             padding: 18px 30px;
-            &:hover {
-                color: $navbar-default-link-hover-color;
-                background-color: $navbar-default-link-hover-bg;
-            }
-        }
-        > .active > a {
-            &,
+            transition: text-shadow 0.3s;
             &:hover,
-            &:focus {
-                text-decoration: none;
-                font-weight: 500;
-                color: $navbar-default-link-active-color;
-                background-color: $navbar-default-link-active-bg;
+            &.active {
+                color: $navbar-default-link-hover-color;
+                text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15);
+            }
+            &.active {
+                font-weight: 400;
             }
         }
     }
@@ -84,6 +79,7 @@ $navbar-vivid-link-hover-color       : #bd1550;
     border-color: $navbar-default-border;
 }
 
+
 /****************************************************************************************
 
 
@@ -91,27 +87,26 @@ $navbar-vivid-link-hover-color       : #bd1550;
 
 
 *****************************************************************************************/
+
 .nav-side {
     @include font-size(2.4);
     font-weight: 300;
     margin-top: -0.37em;
-    > li {
+    >li {
         list-style-type: none;
-        > a {           
+        >a {
             padding-top: 5px;
             padding-bottom: 5px;
             color: $navbar-vivid-link-color;
             text-decoration: none;
-            &:hover{
+            &:hover {
                 color: $navbar-vivid-link-hover-color;
                 background: none;
             }
         }
     }
-    >li.active > a {
+    >li.active>a {
         color: $navbar-vivid-link-hover-color;
         text-shadow: 1px 1px 3px maroon;
     }
 }
-
-
