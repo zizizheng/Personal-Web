@@ -14,7 +14,7 @@ export default class SlideShow extends React.Component {
     render() {
         return (
             <div id="slideShow">
-                <h3><i>Barpretender's Photos</i></h3>
+                <h3><i>Performance Photos</i></h3>
                 <img src={this.state.src} alt="band photos" />
                 <div className="arrow leftArrow" onClick={() => this.photoClick(-1)}>&#10094;</div>
                 <div className="arrow rightArrow" onClick={() => this.photoClick(1)}>&#10095;</div>

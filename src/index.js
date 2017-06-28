@@ -14,6 +14,7 @@ import store from './js/store';
 
 // import './assets/css/bootstrap.min.css';
 import './assets/css/styles.css';
+import './js/facebook.js';
 
 const app = document.getElementById('app');
 
