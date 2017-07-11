@@ -286,7 +286,7 @@ strong {
 
 /*********************************************************************
 
-                                Specifics
+                            Specifics
 
 **********************************************************************/
 #main {
@@ -589,21 +589,65 @@ strong {
   width: 100%;
   height: 100%; }
   #modal img {
-    position: fixed;
-    width: 150px;
-    height: 150px;
+    position: absolute; }
+  #modal .icon {
+    width: 50px;
+    height: 50px;
+    top: 3%;
+    left: 1%; }
+  #modal .profile {
+    width: 120px;
+    height: 120px;
     top: 10%;
-    left: 10%; }
-  #modal .messenge-me {
-    text-align: center;
-    font-size: 1.25rem;
-    color: #a5a5a5;
-    position: fixed;
-    top: 50%; }
+    left: 10%;
+    border-radius: 50%; }
+  #modal h1 {
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 25%;
+    margin: 0; }
+  #modal h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 25%;
+    margin: 0; }
+  #modal h3 {
+    font-size: 1rem;
+    position: absolute;
+    color: white;
+    top: 27%;
+    left: 25%;
+    margin: 0; }
+  #modal .media-block {
+    --block_width: 300px;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    display: flex;
+    justify-content: space-around; }
+    #modal .media-block div {
+      width: var(--block_width);
+      height: 400px;
+      box-shadow: 0px 0px 42px -1px rgba(237, 135, 181, 0.64); }
+    #modal .media-block img,
+    #modal .media-block video {
+      width: var(--block_width);
+      height: 300px; }
+    #modal .media-block p {
+      width: 280px;
+      padding: 5px 10px;
+      position: absolute;
+      top: 300px;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      color: white; }
 
 /*********************************************************************
 
-                                Items
+                            Items
 
 **********************************************************************/
 .btn {
@@ -638,7 +682,7 @@ strong {
 
 /*********************************************************************
 
-                                Content
+                            Content
 
 **********************************************************************/
 .page-header {

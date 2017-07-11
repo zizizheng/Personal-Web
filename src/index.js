@@ -12,7 +12,6 @@ import Contact from './js/pages/contact';
 
 import store from './js/store';
 
-// import './assets/css/bootstrap.min.css';
 import './assets/css/styles.css';
 import './js/facebook.js';
 
@@ -26,7 +25,7 @@ ReactDOM.render(
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/profolio" component={Profolio} />
-                <Route path="/contact" component={Contact} />            
+                <Route path="/contact" component={Contact} />
                 <Footer />
             </div>
         </HashRouter>
