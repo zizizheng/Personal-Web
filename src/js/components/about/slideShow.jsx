@@ -7,7 +7,7 @@ export default class SlideShow extends React.Component {
     constructor() {
         super();
         this.photos = [sound, coffee, logo];
-        this.styles = ["show-photo side left", "show-photo center", "show-photo side right"];
+        this.styles = ["side left", "center", "side right"];
         this.state = {
             style: {
                 left: this.styles[0], center: this.styles[1], right: this.styles[2]
@@ -21,11 +21,11 @@ export default class SlideShow extends React.Component {
             <div id="slideShow">
                 <h3><em>Performance Photos</em></h3>
                 <div className="slider">
-                    <img className={this.state.style.left} src={this.photos[0]} alt="left photo" />
+                    <img className={this.state.style.left + " show-photo"} src={this.photos[0]} alt="left photo" />
                     <div className="arrow leftArrow" onClick={() => this.photoClick(-1)}>&#10094;</div>
-                    <img className={this.state.style.center} src={this.photos[1]} alt="center photo" />
+                    <img className={this.state.style.center + " show-photo"} src={this.photos[1]} alt="center photo" />
                     <div className="arrow rightArrow" onClick={() => this.photoClick(1)}>&#10095;</div>
-                    <img className={this.state.style.right} src={this.photos[2]} alt="right photo" />
+                    <img className={this.state.style.right + " show-photo"} src={this.photos[2]} alt="right photo" />
                 </div>
             </div>
         );
