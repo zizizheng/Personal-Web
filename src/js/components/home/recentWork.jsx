@@ -43,14 +43,14 @@ class RecentWork extends Component {
                         <p></p>
                     </div>
                     <div className="single">
-                        <a className="thumbnail" href="sidebar-right.html">
+                        <a className="thumbnail" href="">
                             <span className="img">
                                 <img src={temImage} alt="" />
                                 <span className="seeDetail"><span className="more">See details &rarr;</span></span>
                             </span>
                             <span className="title">Lorem studios - interior and patio design</span>
                         </a>
-                        <span className="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+                        <span className="details"><a href="">None</a> | <a href="">None</a></span>
                         <h4></h4>
                         <p></p>
                     </div>

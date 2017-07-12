@@ -102,57 +102,57 @@ function Details() {
             <section>
                 <div className="shadow">
                     <img src={xtion_m} alt="xtion meddium" />
-                    <p>Xtion Pro Live</p>
+                    <p className="no-style">Xtion Pro Live</p>
                 </div>
                 <div className="shadow">
                     <img src={kinect} alt="kinect" />
-                    <p>Kinect v1</p>
+                    <p className="no-style">Kinect v1</p>
                 </div>
                 <div className="shadow">
                     <img src={raspberry_m} alt="raspberry" />
-                    <p>Raspbery PI 3</p>
+                    <p className="no-style">Raspbery PI 3</p>
                 </div>
             </section>
             <h3><i>Software</i></h3>
             <section>
                 <div className="shadow">
                     <img src={openni} alt="openni" />
-                    <p>OpenNI (SDK 2)</p>
+                    <p className="no-style">OpenNI (SDK 2)</p>
                 </div>
                 <div className="shadow">
                     <img src={nite} alt="nite" />
-                    <p>NiTE (Middleware)</p>
+                    <p className="no-style">NiTE (Middleware)</p>
                 </div>
                 <div className="shadow">
                     <img src={debian} alt="debian" />
-                    <p>Debian (OS)</p>
+                    <p className="no-style">Debian (OS)</p>
                 </div>
                 <div className="shadow">
                     <img src={opencv} alt="opencv" />
-                    <p>OpenCV</p>
+                    <p className="no-style">OpenCV</p>
                 </div>
                 <div className="shadow">
                     <img src={filezilla_m} alt="filezilla" />
-                    <p>FileZilla Server</p>
+                    <p className="no-style">FileZilla Server</p>
                 </div>
                 <div className="shadow">
                     <img src={kinectsdk} alt="kinect sdk" />
-                    <p>Kinect SDK</p>
+                    <p className="no-style">Kinect SDK</p>
                 </div>
             </section>
             <h3><i>Language</i></h3>
             <section>
                 <div className="shadow">
                     <img src={c} alt="C" />
-                    <p>C</p>
+                    <p className="no-style">C</p>
                 </div>
                 <div className="shadow">
                     <img src={c_plusplus} alt="C++" />
-                    <p>C++</p>
+                    <p className="no-style">C++</p>
                 </div>
                 <div className="shadow">
                     <img src={c_sharp} alt="C#" />
-                    <p>C#</p>
+                    <p className="no-style">C#</p>
                 </div>
             </section>
         </div>

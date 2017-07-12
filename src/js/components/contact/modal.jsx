@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import fetchJsonp from 'fetch-jsonp';
 class Modal extends Component {
 
     constructor(props, context) {
@@ -36,10 +36,14 @@ class Modal extends Component {
     }
     fetchData() {
         if (!this.fetched) {
-            let profile = 'https://api.instagram.com/v1/users/self/?access_token=1719925228.1064b18.f3df8a8016974fe79252b87cab73a729';
-            let media = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1719925228.1064b18.f3df8a8016974fe79252b87cab73a729&count=4';
+            // local
+            // let profile = 'https://api.instagram.com/v1/users/self/?access_token=1719925228.1064b18.f3df8a8016974fe79252b87cab73a729';
+            // let media = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1719925228.1064b18.f3df8a8016974fe79252b87cab73a729&count=4';
 
-            fetch(profile)
+            let profile = 'https://api.instagram.com/v1/users/self/?access_token=1719925228.bca275e.68132251ec524787817be421003451ef';
+            let media = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=1719925228.bca275e.68132251ec524787817be421003451ef&count=4';
+
+            fetchJsonp(profile)
                 .then((response) => response.json())
                 .then((data) => {
                     this.fetched = true;
@@ -53,12 +57,11 @@ class Modal extends Component {
                     });
                 })
                 .catch((error) => console.error(error));
-            fetch(media)
+            fetchJsonp(media)
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
                     let medias = [];
-                    let text = [];
                     let source;
                     let internel_text;
                     for (let i = 0; i < data.data.length; i++) {

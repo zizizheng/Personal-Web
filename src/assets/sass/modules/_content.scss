@@ -27,6 +27,7 @@
     }
     .descripition {
         padding-left: $between-p-image;
+        padding-top: 20px;
     }
     .more-link {
         font-weight: 700;
@@ -63,11 +64,6 @@
             color: $color-meta;
         }
     }
-    h3 {
-        font-family: $font-special;
-        font-size: 40px;
-        font-size: 1.5rem;
-    }
     a {
         text-decoration: none;
         color: #f392b4;
@@ -83,12 +79,12 @@
         }
     }
     #slideShow {
-        clear: both;
         $photo-height: 540px;
-        text-align: center;
-        position: relative;
         width: 720px;
         height: $photo-height;
+        clear: both;
+        text-align: center;
+        position: relative;
         margin: 30px auto;
         img {
             width: 100%;
@@ -97,6 +93,34 @@
         h4 {
             color: darkslateblue;
             padding: 3px;
+        }
+        .slider {
+            position: relative;
+            transition: all;
+            .show-photo {
+                width: 720px;
+                height: 540px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all;
+                &.side {
+                    opacity: 0.5;
+                    width: 360px;
+                    height: 270px;
+                    z-index: -10;
+                    &.left {
+                        transform: translateX(-100%) translateY(50%);
+                    }
+                    &.right {
+                        transform: translateX(200%) translateY(50%);
+                    }
+                }
+                &.center {
+                    z-index: -1;
+                }
+            }
         }
         .arrow {
             $symbol-size: 24px;
@@ -223,7 +247,13 @@
     p {
         font-size: 1rem;
         padding: 0 20px;
-        margin-left: 20px;
+        margin: 0 20px;
+        text-indent: 40px;
+        text-align: justify;
+        &.no-style {
+            text-indent: 0;
+            text-align: center;
+        }
     }
     h3 {
         font-family: $font-special;
@@ -245,24 +275,6 @@
             margin-left: 0;
         }
     }
-    section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        text-align: center;
-        p {
-            padding: 0;
-            margin: 0;
-        }
-        div {
-            width: 23%;
-            padding: 10px;
-            margin: 20px;
-        }
-        h5 {
-            margin: 10px 0;
-        }
-    }
     article {
         ul,
         ol {
@@ -272,6 +284,7 @@
             @include font-size(1.5);
             line-height: 2rem;
             font-weight: bold;
+            margin-left: 30px;
             >p {
                 font-weight: normal;
             }
@@ -322,11 +335,9 @@
         margin: 20px;
         margin-bottom: 40px;
         text-align: center;
-        p {
-            margin-top: 10px;
-            margin-bottom: 5px;
+        h3 {
+            font-size: 1.2rem;
             font-style: italic;
-            font-weight: 600;
         }
         img {
             width: 80%;
@@ -536,11 +547,11 @@
 .featured {
     @include font-size(1.3);
     h3 {
-        @include font-size( 2.4);
+        font-family: $font-special;
+        font-size: 40px;
+        font-size: 1.5rem;
         font-weight: bold;
-        font-family: $font-utilities;
         text-transform: uppercase;
-        line-height: 1.4em;
         vertical-align: middle;
         margin: 0 0 25px 0;
     }

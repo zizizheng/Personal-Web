@@ -18,7 +18,7 @@ p {
 ul,
 ol {
     line-height: 1.6em;
-    margin: 0 0 30px 0;
+    margin: 30px 0;
 }
 
 blockquote {
@@ -71,7 +71,10 @@ a {
     &:hover {
         color: lighten($color-action, 15%);
     }
-    &:hover, &:focus, &:active, &:visited {
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
         text-decoration: none;
     }
 }

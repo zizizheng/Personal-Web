@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
         this.message = {
             'fb': 'Chat with me by using private message, I will respond as soon as I can',
             'google': 'I commonly use Gmail, please send me an email and start our conversation',
-            'ig': 'Here are some of my personal photo, but it\'s private now...',
+            'ig': 'Click to view my personal feeds, coming from Instagram API',
             'gh': 'Source code including Foodhub and this website are stored on the github, feel free to leave your comments and discuss with me',
             'leet': 'Sometimes I practice algorithm on Leetcode to make my logical of thinking'
         }

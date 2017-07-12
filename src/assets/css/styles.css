@@ -16,7 +16,7 @@ p {
 ul,
 ol {
   line-height: 1.6em;
-  margin: 0 0 30px 0; }
+  margin: 30px 0; }
 
 blockquote {
   padding: 10px 20px;
@@ -306,7 +306,8 @@ strong {
     padding: 10px;
     width: 360px; }
   #glance .descripition {
-    padding-left: 50px; }
+    padding-left: 50px;
+    padding-top: 20px; }
   #glance .more-link {
     font-weight: 700;
     font-style: italic;
@@ -335,11 +336,6 @@ strong {
     font-style: italic;
     color: #a5a5a5; }
 
-#skills h3 {
-  font-family: Alice, Georgia, serif;
-  font-size: 40px;
-  font-size: 1.5rem; }
-
 #skills a {
   text-decoration: none;
   color: #f392b4; }
@@ -353,11 +349,11 @@ strong {
     display: inline; }
 
 #skills #slideShow {
+  width: 720px;
+  height: 540px;
   clear: both;
   text-align: center;
   position: relative;
-  width: 720px;
-  height: 540px;
   margin: 30px auto; }
   #skills #slideShow img {
     width: 100%;
@@ -365,6 +361,28 @@ strong {
   #skills #slideShow h4 {
     color: darkslateblue;
     padding: 3px; }
+  #skills #slideShow .slider {
+    position: relative;
+    transition: all; }
+    #skills #slideShow .slider .show-photo {
+      width: 720px;
+      height: 540px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all; }
+      #skills #slideShow .slider .show-photo.side {
+        opacity: 0.5;
+        width: 360px;
+        height: 270px;
+        z-index: -10; }
+        #skills #slideShow .slider .show-photo.side.left {
+          transform: translateX(-100%) translateY(50%); }
+        #skills #slideShow .slider .show-photo.side.right {
+          transform: translateX(200%) translateY(50%); }
+      #skills #slideShow .slider .show-photo.center {
+        z-index: -1; }
   #skills #slideShow .arrow {
     line-height: 24px;
     text-align: center;
@@ -469,7 +487,12 @@ strong {
   #profolio p {
     font-size: 1rem;
     padding: 0 20px;
-    margin-left: 20px; }
+    margin: 0 20px;
+    text-indent: 40px;
+    text-align: justify; }
+    #profolio p.no-style {
+      text-indent: 0;
+      text-align: center; }
   #profolio h3 {
     font-family: Alice, Georgia, serif;
     font-size: 40px;
@@ -486,20 +509,6 @@ strong {
       padding-left: 0; }
     #profolio aside li {
       margin-left: 0; }
-  #profolio section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center; }
-    #profolio section p {
-      padding: 0;
-      margin: 0; }
-    #profolio section div {
-      width: 23%;
-      padding: 10px;
-      margin: 20px; }
-    #profolio section h5 {
-      margin: 10px 0; }
   #profolio article ul,
   #profolio article ol {
     list-style-position: inside; }
@@ -507,7 +516,8 @@ strong {
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 2rem;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-left: 30px; }
     #profolio article li > p {
       font-weight: normal; }
   #profolio article h1 {
@@ -549,11 +559,9 @@ strong {
     margin: 20px;
     margin-bottom: 40px;
     text-align: center; }
-    #profolio .graphBlock p {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-style: italic;
-      font-weight: 600; }
+    #profolio .graphBlock h3 {
+      font-size: 1.2rem;
+      font-style: italic; }
     #profolio .graphBlock img {
       width: 80%; }
 
@@ -731,12 +739,11 @@ strong {
   font-size: 13px;
   font-size: 0.8125rem; }
   .featured h3 {
-    font-size: 24px;
+    font-family: Alice, Georgia, serif;
+    font-size: 40px;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    line-height: 1.4em;
     vertical-align: middle;
     margin: 0 0 25px 0; }
   .featured h4 {

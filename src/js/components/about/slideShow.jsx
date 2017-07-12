@@ -7,25 +7,41 @@ export default class SlideShow extends React.Component {
     constructor() {
         super();
         this.photos = [sound, coffee, logo];
-        this.state = { src: this.photos[0] };
-        this.index = 0;
+        this.styles = ["show-photo side left", "show-photo center", "show-photo side right"];
+        this.state = {
+            style: {
+                left: this.styles[0], center: this.styles[1], right: this.styles[2]
+            }
+        };
+        this.index = 1;
         this.photoClick = this.photoClick.bind(this);
     }
     render() {
         return (
             <div id="slideShow">
-                <h3><i>Performance Photos</i></h3>
-                <img src={this.state.src} alt="band photos" />
-                <div className="arrow leftArrow" onClick={() => this.photoClick(-1)}>&#10094;</div>
-                <div className="arrow rightArrow" onClick={() => this.photoClick(1)}>&#10095;</div>
+                <h3><em>Performance Photos</em></h3>
+                <div className="slider">
+                    <img className={this.state.style.left} src={this.photos[0]} alt="left photo" />
+                    <div className="arrow leftArrow" onClick={() => this.photoClick(-1)}>&#10094;</div>
+                    <img className={this.state.style.center} src={this.photos[1]} alt="center photo" />
+                    <div className="arrow rightArrow" onClick={() => this.photoClick(1)}>&#10095;</div>
+                    <img className={this.state.style.right} src={this.photos[2]} alt="right photo" />
+                </div>
             </div>
         );
     }
 
     photoClick(v) {
         this.index += v;
-        if (this.index < 0) this.index = this.photos.length - 1;
-        else if (this.index >= this.photos.length) this.index = 0;
-        this.setState({ src: this.photos[this.index] });
+        this.index = (this.index + this.styles.length) % this.styles.length;
+        let left = (this.index - 1 + this.styles.length) % this.styles.length;
+        let right = (this.index + 1 + this.styles.length) % this.styles.length;
+        this.setState({
+            style: {
+                left: this.styles[left],
+                center: this.styles[this.index],
+                right: this.styles[right]
+            }
+        });
     }
 }
