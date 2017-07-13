@@ -1,10 +1,10 @@
 import React from 'react';
 
-import foodubImg from '../../../assets/images/profilio/foodhub.png';
-import welcomeImg from '../../../assets/images/profilio/welcome.png';
-import expiryImg from '../../../assets/images/profilio/expiry.png';
-import searchImg from '../../../assets/images/profilio/searchPanel.png'
-import addImg from '../../../assets/images/profilio/addPanel.png'
+import foodubImg from '../../../assets/images/portfolio/foodhub.png';
+import welcomeImg from '../../../assets/images/portfolio/welcome.png';
+import expiryImg from '../../../assets/images/portfolio/expiry.png';
+import searchImg from '../../../assets/images/portfolio/searchPanel.png'
+import addImg from '../../../assets/images/portfolio/addPanel.png'
 
 export default class Foodhub extends React.Component {
 

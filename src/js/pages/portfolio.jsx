@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Foodhub from '../components/profolio/foodhub';
-import Dissert from '../components/profolio/dissert';
+import Foodhub from '../components/portfolio/foodhub';
+import Dissert from '../components/portfolio/dissert';
 
-export default class Profolio extends React.Component {
+export default class Portfolio extends React.Component {
 
     constructor() {
         super();
@@ -27,7 +27,7 @@ export default class Profolio extends React.Component {
         return (
             <main id="main">
 
-                <div id="profolio" className="container">
+                <div id="portfolio" className="container">
                     <aside>
                         <ul ref="list" className="text-right nav-side">
                             <li ref="foodhub" className={this.state.curSelect === 'foodhub' ? 'active' : ''}>
@@ -39,7 +39,7 @@ export default class Profolio extends React.Component {
                         </ul>
 
                     </aside>
-                    <div id="profolio__content">
+                    <div id="portfolio__content">
                         {this.state.curContent}
                     </div>
                 </div>

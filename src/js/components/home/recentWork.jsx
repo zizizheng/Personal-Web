@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import temImage from '../../../assets/images/s1.jpg'
-import foodhub from '../../../assets/images/profilio/foodhub.png';
-import itets from '../../../assets/images/profilio/itets.png';
+import foodhub from '../../../assets/images/portfolio/foodhub.png';
+import itets from '../../../assets/images/portfolio/itets.png';
 
 class RecentWork extends Component {
 

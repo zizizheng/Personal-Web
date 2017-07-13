@@ -16,7 +16,7 @@ class Intro extends React.Component {
                         Hi, this is my personal page.<br />
                         Self-introduction is presented in
                         <Link to="/about" onClick={() => this.changePage('about')}> About</Link>, including my programing skills and my personal experience.<br />
-                        <Link to="/profolio" onClick={() => this.changePage('profolio')}>Profolio</Link> shows the recent works I have done, and the introduction of my master's dissertation.<br />
+                        <Link to="/portfolio" onClick={() => this.changePage('portfolio')}>Portfolio</Link> shows the recent works I have done, and the introduction of my master's dissertation.<br />
                         <Link to="/contact" onClick={() => this.changePage('contact')}>Contact</Link> contains any information that can contact me, please check it.<br />
                     </p>
                     <p className="lead text-center"><strong>Hope You Enjoy!</strong></p>

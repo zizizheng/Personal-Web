@@ -38,7 +38,7 @@ class Nav extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/profolio" onClick={() => { this.changePage('profolio') }} className={this.props.curPage === 'profolio' ? 'active' : ''}>Profolio</Link>
+                            <Link to="/portfolio" onClick={() => { this.changePage('portfolio') }} className={this.props.curPage === 'portfolio' ? 'active' : ''}>Portfolio</Link>
                         </li>
                         <li>
                             <Link to="/contact" onClick={() => { this.changePage('contact') }} className={this.props.curPage === 'contact' ? 'active' : ''}>Contact

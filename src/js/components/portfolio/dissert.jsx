@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 
-import archi from '../../../assets/images/profilio/dissert/architecture.png';
-import xtion from '../../../assets/images/profilio/dissert/xtion.jpg';
-import raspberry from '../../../assets/images/profilio/dissert/raspberry.png';
-import wpf from '../../../assets/images/profilio/dissert/wpf.png';
-import filezilla from '../../../assets/images/profilio/dissert/filezilla.png';
-import xtion_m from '../../../assets/images/profilio/dissert/xtion_m.jpg';
-import raspberry_m from '../../../assets/images/profilio/dissert/raspberry_m.jpg';
-// import wpf_m from '../../../assets/images/profilio/dissert/wpf_m.png';
-import filezilla_m from '../../../assets/images/profilio/dissert/filezilla_m.jpg';
-import kinect from '../../../assets/images/profilio/dissert/kinect.png';
-import openni from '../../../assets/images/profilio/dissert/openni.png';
-import nite from '../../../assets/images/profilio/dissert/nite.png';
-import opencv from '../../../assets/images/profilio/dissert/opencv.png';
-import debian from '../../../assets/images/profilio/dissert/debian.png';
-import kinectsdk from '../../../assets/images/profilio/dissert/kinectsdk.png';
-import c from '../../../assets/images/profilio/dissert/c.png';
-import c_plusplus from '../../../assets/images/profilio/dissert/c_plusplus.png';
-import c_sharp from '../../../assets/images/profilio/dissert/c_sharp.png';
-import demo from '../../../assets/images/profilio/dissert/demo.png';
-import layer from '../../../assets/images/profilio/dissert/layer.png';
+import archi from '../../../assets/images/portfolio/dissert/architecture.png';
+import xtion from '../../../assets/images/portfolio/dissert/xtion.jpg';
+import raspberry from '../../../assets/images/portfolio/dissert/raspberry.png';
+import wpf from '../../../assets/images/portfolio/dissert/wpf.png';
+import filezilla from '../../../assets/images/portfolio/dissert/filezilla.png';
+import xtion_m from '../../../assets/images/portfolio/dissert/xtion_m.jpg';
+import raspberry_m from '../../../assets/images/portfolio/dissert/raspberry_m.jpg';
+// import wpf_m from '../../../assets/images/portfolio/dissert/wpf_m.png';
+import filezilla_m from '../../../assets/images/portfolio/dissert/filezilla_m.jpg';
+import kinect from '../../../assets/images/portfolio/dissert/kinect.png';
+import openni from '../../../assets/images/portfolio/dissert/openni.png';
+import nite from '../../../assets/images/portfolio/dissert/nite.png';
+import opencv from '../../../assets/images/portfolio/dissert/opencv.png';
+import debian from '../../../assets/images/portfolio/dissert/debian.png';
+import kinectsdk from '../../../assets/images/portfolio/dissert/kinectsdk.png';
+import c from '../../../assets/images/portfolio/dissert/c.png';
+import c_plusplus from '../../../assets/images/portfolio/dissert/c_plusplus.png';
+import c_sharp from '../../../assets/images/portfolio/dissert/c_sharp.png';
+import demo from '../../../assets/images/portfolio/dissert/demo.png';
+import layer from '../../../assets/images/portfolio/dissert/layer.png';
 
 class Dissert extends Component {
     // showImg = [
