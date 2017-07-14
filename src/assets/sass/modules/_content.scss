@@ -26,6 +26,7 @@
         width: 360px;
     }
     .descripition {
+        width: 60%;
         padding-left: $between-p-image;
         padding-top: 20px;
     }
@@ -487,7 +488,7 @@
 }
 
 .indent {
-    padding-left: 12px;
+    padding-left: 1rem;
 }
 
 
@@ -498,7 +499,7 @@
 **********************************************************************/
 
 .page-header {
-    margin: 25px 20px;
+    margin: 15px 20px;
 }
 
 .section-title,

@@ -72,9 +72,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-strong {
-  font-weight: bolder; }
-
 .container {
   width: 1140px;
   max-width: 100%; }
@@ -306,6 +303,7 @@ strong {
     padding: 10px;
     width: 360px; }
   #glance .descripition {
+    width: 60%;
     padding-left: 50px;
     padding-top: 20px; }
   #glance .more-link {
@@ -685,7 +683,7 @@ strong {
   margin-bottom: 20px; }
 
 .indent {
-  padding-left: 12px; }
+  padding-left: 1rem; }
 
 /*********************************************************************
 
@@ -693,7 +691,7 @@ strong {
 
 **********************************************************************/
 .page-header {
-  margin: 25px 20px; }
+  margin: 15px 20px; }
 
 .section-title,
 .entry-title {

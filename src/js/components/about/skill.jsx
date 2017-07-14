@@ -30,7 +30,7 @@ export default class Skill extends React.Component {
                         </ul>
                     </h2>
 
-                    <h3 id="web" className="space-for-navigate__first"><i>Skills About Front End Web Development</i></h3>
+                    <h3 id="web" className="space-for-navigate__first"><i>關於網頁前端開發</i></h3>
                     <div className="skillRow wrapper">{this.webSkillList()}</div>
 
                     <h3 id="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3>
