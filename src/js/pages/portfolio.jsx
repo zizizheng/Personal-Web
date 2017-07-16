@@ -1,17 +1,15 @@
 import React from 'react';
-
 import Foodhub from '../components/portfolio/foodhub';
 import Dissert from '../components/portfolio/dissert';
 
 export default class Portfolio extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            curContent: '',
-            curSelect: ''
+            curContent: <Foodhub class="animated fadeIn" />,
+            curSelect: 'foodhub'
         };
-
     }
 
     componentDidMount() {
@@ -19,7 +17,6 @@ export default class Portfolio extends React.Component {
             this.changeContent(this.props.location.state.curPage);
         }
         window.scrollTo(0, 0);
-        this.changeContent('foodhub');
     }
 
     render() {
@@ -49,6 +46,7 @@ export default class Portfolio extends React.Component {
     }
 
     changeContent(v, e) {
+        console.log(v);
         if (e) e.preventDefault(e);
         if (v === this.state.curSelect) return;
         else {

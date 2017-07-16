@@ -86,7 +86,8 @@
         clear: both;
         text-align: center;
         position: relative;
-        margin: 30px auto;
+        margin: 70px auto;
+        padding: 30px 0;
         h4 {
             color: darkslateblue;
             padding: 3px;
@@ -148,19 +149,21 @@
             left: 0%;
         }
     }
+    #music-title {
+        width: 70%;
+        margin-right: 0;
+        display: inline-block;
+    }
+    #guitar {
+        width: 280px;
+        float: right;
+    }
     #music {
-        position: relative;
         article {
-            margin-right: 28%;
+            width: 1040px;
             p {
                 padding: 0 5px;
             }
-        }
-        #music-profile {
-            top: 55px;
-            position: absolute;
-            width: 280px;
-            right: 0;
         }
     }
     .skillRow {
@@ -235,23 +238,28 @@
         }
     }
     .message {
+        height: 50px;
         padding: 30px 120px;
-        margin-bottom: 100px;
     }
 }
 
 #portfolio {
     display: flex;
     justify-content: center;
+    img {
+        box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    }
     p {
         font-size: 1rem;
         padding: 0 20px;
         margin: 0 20px;
-        text-indent: 40px;
+        text-indent: 2rem;
         text-align: justify;
-        &.no-style {
+        &.no-indent {
             text-indent: 0;
-            text-align: center;
+        }
+        &.topspace {
+            margin-top: 40px;
         }
     }
     h3 {
@@ -280,8 +288,8 @@
             list-style-position: inside;
         }
         li {
-            @include font-size(1.5);
-            line-height: 2rem;
+            font-size: 1rem;
+            line-height: 3rem;
             font-weight: bold;
             margin-left: 30px;
             >p {
@@ -322,14 +330,6 @@
         margin-left: 10px;
         margin-bottom: 10px;
     }
-    #showcase {
-        position: fixed;
-        width: 275px;
-        height: 300px;
-        top: 62px;
-        left: 0;
-        background-color: cornflowerblue;
-    }
     .graphBlock {
         margin: 20px;
         margin-bottom: 40px;
@@ -340,6 +340,22 @@
         }
         img {
             width: 80%;
+        }
+    }
+    .equip {
+        text-align: center;
+        display: flex;
+        p {
+            padding: 0;
+            margin: 10px;
+            text-align: center;
+            text-indent: 0;
+        }
+        img {
+            box-shadow: none;
+        }
+        div {
+            width: 24%;
         }
     }
 }
@@ -485,10 +501,6 @@
 .h1__margin {
     margin-top: 0;
     margin-bottom: 20px;
-}
-
-.indent {
-    padding-left: 1rem;
 }
 
 

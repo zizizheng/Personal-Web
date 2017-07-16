@@ -17,21 +17,21 @@ class RecentWork extends Component {
         return (
             <div className="recentworks topspace">
                 <h2 className="section-title"><span>Recent Works</span></h2>
-                <div className={this.props.style + " thumbnails"} onClick={() => this.changePage('profolio')}>
+                <div className={this.props.style + " thumbnails"} onClick={() => this.changePage('portfolio')}>
                     <div className="single">
-                        <Link to={{ pathname: '/profolio', state: { curPage: 'foodhub' } }} className="thumbnail">
+                        <Link to={{ pathname: '/portfolio', state: { curPage: 'foodhub' } }} className="thumbnail">
                             <span className="img">
                                 <img src={foodhub} alt="foodhub" />
                                 <span className="seeDetail"><span className="more">See details &rarr;</span></span>
                             </span>
-                            <span className="title">Foodhub - Post System</span>
+                            <span className="title">Foodhub - Pos System</span>
                         </Link>
                         <span className="details"><a href="">Web Design</a> | <a href="">Application</a> | <a href="">FrontEnd</a></span>
                         <h4></h4>
                         <p></p>
                     </div>
                     <div className="single">
-                        <Link to={{ pathname: '/profolio', state: { curPage: 'dissertion' } }} className="thumbnail" >
+                        <Link to={{ pathname: '/portfolio', state: { curPage: 'dissertion' } }} onClick={() => this.changePage('portfolio')} className="thumbnail" >
                             <span className="img">
                                 <img src={itets} alt="dissertion architecture" />
                                 <span className="seeDetail"><span className="more">See details &rarr;</span></span>

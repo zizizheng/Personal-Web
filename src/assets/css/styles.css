@@ -1,10 +1,11 @@
+@charset "UTF-8";
 html {
   font-size: 100%; }
 
 body {
   font-size: 15px;
   font-size: 0.9375rem;
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-family: "Open sans", Helvetica, Arial, "LiHei Pro", "微軟正黑體", sans-serif;
   color: #666666;
   padding: 0;
   margin: 0; }
@@ -35,7 +36,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-family: "Open sans", Helvetica, Arial, "LiHei Pro", "微軟正黑體", sans-serif;
   font-weight: 400;
   color: #333333; }
 
@@ -111,6 +112,12 @@ img {
 
 .text-right {
   text-align: right; }
+
+.indent {
+  text-indent: 1rem; }
+
+.double-indent {
+  text-indent: 2rem; }
 
 .shadow {
   position: relative;
@@ -352,7 +359,8 @@ img {
   clear: both;
   text-align: center;
   position: relative;
-  margin: 30px auto; }
+  margin: 70px auto;
+  padding: 30px 0; }
   #skills #slideShow h4 {
     color: darkslateblue;
     padding: 3px; }
@@ -402,17 +410,19 @@ img {
   #skills #slideShow .leftArrow {
     left: 0%; }
 
-#skills #music {
-  position: relative; }
-  #skills #music article {
-    margin-right: 28%; }
-    #skills #music article p {
-      padding: 0 5px; }
-  #skills #music #music-profile {
-    top: 55px;
-    position: absolute;
-    width: 280px;
-    right: 0; }
+#skills #music-title {
+  width: 70%;
+  margin-right: 0;
+  display: inline-block; }
+
+#skills #guitar {
+  width: 280px;
+  float: right; }
+
+#skills #music article {
+  width: 1040px; }
+  #skills #music article p {
+    padding: 0 5px; }
 
 #skills .skillRow {
   width: 100%;
@@ -475,21 +485,24 @@ img {
         animation-iteration-count: infinite;
         animation-duration: 1.5s; }
   #contactBlock .message {
-    padding: 30px 120px;
-    margin-bottom: 100px; }
+    height: 50px;
+    padding: 30px 120px; }
 
 #portfolio {
   display: flex;
   justify-content: center; }
+  #portfolio img {
+    box-shadow: 4px 4px 12px -2px rgba(51, 51, 102, 0.5); }
   #portfolio p {
     font-size: 1rem;
     padding: 0 20px;
     margin: 0 20px;
-    text-indent: 40px;
+    text-indent: 2rem;
     text-align: justify; }
-    #portfolio p.no-style {
-      text-indent: 0;
-      text-align: center; }
+    #portfolio p.no-indent {
+      text-indent: 0; }
+    #portfolio p.topspace {
+      margin-top: 40px; }
   #portfolio h3 {
     font-family: Alice, Georgia, serif;
     font-size: 40px;
@@ -510,9 +523,8 @@ img {
   #portfolio article ol {
     list-style-position: inside; }
   #portfolio article li {
-    font-size: 15px;
-    font-size: 0.9375rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 3rem;
     font-weight: bold;
     margin-left: 30px; }
     #portfolio article li > p {
@@ -545,13 +557,6 @@ img {
     height: auto;
     margin-left: 10px;
     margin-bottom: 10px; }
-  #portfolio #showcase {
-    position: fixed;
-    width: 275px;
-    height: 300px;
-    top: 62px;
-    left: 0;
-    background-color: cornflowerblue; }
   #portfolio .graphBlock {
     margin: 20px;
     margin-bottom: 40px;
@@ -561,6 +566,18 @@ img {
       font-style: italic; }
     #portfolio .graphBlock img {
       width: 80%; }
+  #portfolio .equip {
+    text-align: center;
+    display: flex; }
+    #portfolio .equip p {
+      padding: 0;
+      margin: 10px;
+      text-align: center;
+      text-indent: 0; }
+    #portfolio .equip img {
+      box-shadow: none; }
+    #portfolio .equip div {
+      width: 24%; }
 
 #to-top {
   display: flex;
@@ -681,9 +698,6 @@ img {
 .h1__margin {
   margin-top: 0;
   margin-bottom: 20px; }
-
-.indent {
-  padding-left: 1rem; }
 
 /*********************************************************************
 

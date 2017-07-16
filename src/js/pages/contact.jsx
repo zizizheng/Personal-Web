@@ -15,17 +15,24 @@ export default class Contact extends React.Component {
         this.messageSpeed = 15;
         this.timeout = [];
         this.state = {
-            message: 'Mouse over to see some message about icon',
+            message: '將鼠標移至圖示上以檢視提示訊息',
             curHover: 'none',
             showModal: false,
             onModal: 'none'
         };
-        this.message = {
+        this.messageEn = {
             'fb': 'Chat with me by using private message, I will respond as soon as I can',
             'google': 'I commonly use Gmail, please send me an email and start our conversation',
             'ig': 'Click to view my personal feeds, coming from Instagram API',
             'gh': 'Source code including Foodhub and this website are stored on the github, feel free to leave your comments and discuss with me',
             'leet': 'Sometimes I practice algorithm on Leetcode to make my logical of thinking'
+        }
+        this.messageCH = {
+            'fb': '發送私人訊息給我，我會以最快的時間回覆',
+            'google': '寄信到我的 gmail 信箱，我每天都會確認是否有新的信件',
+            'ig': '串接了 Instramg API，將顯示我最新的四則動態',
+            'gh': '此個人網站以及協助 FoodBank 所開發的進存銷系統的程式碼皆放在 Github 上，歡迎留下給我的建議或是與我一起討論',
+            'leet': '我偶爾會使用 leetcode 練習對 Javascript 的熟練度以及邏輯思考'
         }
     }
 
@@ -39,6 +46,7 @@ export default class Contact extends React.Component {
     }
 
     render() {
+
         return (
             <main id="main">
 
@@ -46,11 +54,8 @@ export default class Contact extends React.Component {
 
                     <div id="contactBlock">
                         <h3 className="page-title text-center">
-                            Wanna know more about me or Chat with me ? <br /> </h3>
-                        <h3 className="page-title text-center">
-                            You can find my trace in the following commiunities and websites
+                            歡迎點開下方的圖示與我取得聯繫
                         </h3>
-
                         <container className="topspace">
                             <a href="https://m.me/zizi.zheng.1" target="_blank" >
                                 <img id="fbImg" className="animated pulse"
@@ -95,10 +100,10 @@ export default class Contact extends React.Component {
         this.timeout.forEach((t) => { clearTimeout(t) });
         this.timeout = [];
         let output = '', to;
-        for (let i = 0; i < this.message[s].length; i++) {
+        for (let i = 0; i < this.messageCH[s].length; i++) {
             //eslint-disable-next-line
             to = setTimeout(() => {
-                output += this.message[s][i];
+                output += this.messageCH[s][i];
                 this.setState({ message: output });
             }, i * this.messageSpeed);
             this.timeout.push(to);
@@ -109,5 +114,10 @@ export default class Contact extends React.Component {
         this.setState({ showModal: !this.state.showModal, onModal: src });
     }
 
+    // <h3 className="page-title text-center">
+    //     Wanna know more about me or Chat with me ? <br /> </h3>
+    //     <h3 className="page-title text-center">
+    //         You can find my trace in the following commiunities and websites
+    // </h3>);
 
 }

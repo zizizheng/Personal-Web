@@ -24,12 +24,12 @@ export default class About extends React.Component {
                     <article>
                         <header className="page-header">
                             <h1 className="page-title h1__margin">簡歷</h1>
-                            <p className="lead indent">
+                            <p className="lead">
                                 鄭宗霖 (Zizi Zheng)，來自於台南<br />
                                 對於新的科技充滿好奇以及探索的心 <br />
                                 喜歡嘗試新的事物並在學習的過程找到自己的樂趣
                             </p>
-                            <p className="lead indent">
+                            <p className="lead">
                                 在 2016 年八月開始學習網頁前端開發 <br />
                                 目的在於學習一個新的語言，挑戰自己<br />
                                 以下包含了我從古至今所學習到的技能，請繼續往下瀏覽<br />

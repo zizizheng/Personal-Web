@@ -26,17 +26,19 @@ export default class Skill extends React.Component {
                         <ul id="skillsList">
                             <li><Link to="/about#web">Web Development</Link></li>
                             <li><Link to="/about#cs">Computer Science</Link></li>
-                            <li><Link to="/about#music">Music</Link></li>
+                            <li><Link to="/about#music-title">Music</Link></li>
                         </ul>
                     </h2>
 
-                    <h3 id="web" className="space-for-navigate__first"><i>關於網頁前端開發</i></h3>
+                    <h3 id="web" className="space-for-navigate__first"><em>關於網頁前端開發</em></h3>
                     <div className="skillRow wrapper">{this.webSkillList()}</div>
 
-                    <h3 id="cs" className="space-for-navigate"><i>Other Skills About Computer Science</i></h3>
+                    <h3 id="cs" className="space-for-navigate"><em>資訊領域技能</em></h3>
                     <div className="skillRow wrapper">{this.programSkillList()}</div>
+                    <h3 id="music-title" className="space-for-navigate"><em>音樂即生活</em></h3>
+                    <img id="guitar" className="space-for-navigate" src={guitar} alt="I with my guitar" />
 
-                    <div className="skillRow wrapper">{this.MusicSKillList()}</div>
+                    <div className="wrapper">{this.MusicSKillList()}</div>
                 </div>
             </div>
 
@@ -144,19 +146,24 @@ export default class Skill extends React.Component {
     }
 
     MusicSKillList() {
+        /*let english = <article>
+            <h3><em>Can't live without music</em></h3>
+            <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
+                In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar. <br />
+                Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
+                    </p>
+        </article>;*/
+
         return (
-            <div id="music" className="wrapper space-for-navigate">
+            <div id="music">
+
                 <article>
-                    <h3><i>Can't Live Without Music</i></h3>
-                    <p className="lead text-muted">Start playing acoustic guitar since the first grade in senior high school.<br />
-                        In Sep 2014, my friends and I who are full of passion about music formed a band and start my road to eletric guitar. <br />
-                        Our band called <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>BarPretender</strong></a> and I play the lead guitar.
+                    <p className="lead text-muted">於九年前開始接觸木吉他，開啟了自學之路<br />
+                        在 2014 年的九月，我與幾個對音樂有熱忱和想法的朋友組了一個創作樂團 <br />
+                        樂團名稱是 <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>偽酒保</strong></a>，而我在團內負責主奏吉他手
                     </p>
                 </article>
 
-                <div id="music-profile">
-                    <img src={guitar} alt="I with my guitar" />
-                </div>
 
                 <SlideShow />
             </div>

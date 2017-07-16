@@ -22,10 +22,10 @@ class Glance extends Component {
                         <h3 className="lead">我的名字是鄭宗霖，我是個<br /></h3>
                         <div className="content">
                             <div>
-                                <p className="lead indent"><strong>程式設計師</strong>，從高中便開始接觸程式</p>
-                                <p className="lead indent"><strong>排球愛好者</strong>，通常是打主攻手的位置</p>
-                                <p className="lead indent"><strong>音樂份子</strong>，會彈奏電吉他與木吉他</p>
-                                <p className="lead indent"><strong>電玩宅男</strong>，喜歡玩各種不同的遊戲</p>
+                                <p className="lead double-indent"><strong>程式設計師</strong>，從高中便開始接觸程式</p>
+                                <p className="lead double-indent"><strong>排球愛好者</strong>，通常是打主攻手的位置</p>
+                                <p className="lead double-indent"><strong>音樂份子</strong>，會彈奏電吉他與木吉他</p>
+                                <p className="lead double-indent"><strong>電玩宅男</strong>，喜歡玩各種不同的遊戲</p>
                             </div>
                             <Link to='/about#main' className="more-link" onClick={() => this.changePage('about')}>more about me...</Link>
                         </div>
@@ -39,7 +39,7 @@ class Glance extends Component {
         this.props.dispatch({ type: "CHANGE_PAGE", name: v });
     }
 
-    inEnglish() {
+    /*inEnglish() {
         <div className="descripition">
             <h3 className="lead">My name is ZiZi Zheng<br /></h3>
             <div className="content">
@@ -52,7 +52,7 @@ class Glance extends Component {
                 <Link to='/about#main' className="more-link" onClick={() => this.changePage('about')}>more about me</Link>
             </div>
         </div>
-    }
+    }*/
 }
 
 export default connect()(Glance);
