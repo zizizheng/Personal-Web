@@ -64,7 +64,7 @@ export default class Contact extends React.Component {
                             {/*<a href="https://plus.google.com/u/0/111683413001408758628" target="_blank">*/}
                             <a>
                                 <img id="gooImg" className="animated pulse" src={googleImage} alt="google icon" onMouseOver={() => this.onHover('google')}
-                                    onClick={() => this.toggleModal(googleImage)} />
+                                />
                             </a>
                             {/*<a href="https://www.instagram.com/zizi_bartz/" target="_blank">*/}
                             <a>
