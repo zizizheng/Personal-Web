@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link';
+import { navAction } from '../../action/navAction';
 
 import myself from '../../../assets/images/myself.jpg';
 
 class Glance extends Component {
-    constructor(props) {
-        super(props);
-        this.changePage = this.changePage.bind(this);
-    }
 
     render() {
         return (
@@ -27,7 +24,7 @@ class Glance extends Component {
                                 <p className="lead double-indent"><strong>音樂份子</strong>，會彈奏電吉他與木吉他</p>
                                 <p className="lead double-indent"><strong>電玩宅男</strong>，喜歡玩各種不同的遊戲</p>
                             </div>
-                            <Link to='/about#main' className="more-link" onClick={() => this.changePage('about')}>more about me...</Link>
+                            <Link to='/about#main' className="more-link" onClick={() => this.changePage(navAction('about'))}>more about me...</Link>
                         </div>
                     </div>
                 </div>
@@ -36,7 +33,7 @@ class Glance extends Component {
     }
 
     changePage(v) {
-        this.props.dispatch({ type: "CHANGE_PAGE", name: v });
+        this.props.dispatch(v);
     }
 
     /*inEnglish() {

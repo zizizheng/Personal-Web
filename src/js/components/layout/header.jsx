@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import myself from '../../../assets/images/myself.jpg';
-
-
 
 class Header extends React.Component {
 
@@ -13,11 +10,11 @@ class Header extends React.Component {
         super();
         this.handleScroll = this.handleScroll.bind(this);
         this.state = {};
+        this.head = undefined;
     }
 
     componentDidMount() {
-        let headEle = ReactDOM.findDOMNode(this.refs.head);
-        headEle.setAttribute('parallax-speed', '2');
+        this.head.setAttribute('parallax-speed', '2');
         window.addEventListener('scroll', this.handleScroll);
     }
 
@@ -26,12 +23,11 @@ class Header extends React.Component {
             case 'home':
                 window.addEventListener('scroll', this.handleScroll);
                 return (
-                    <header id="header" ref="header" className="home">
-                        <div id="head" ref="head" className="parallax" style={this.state}>
+                    <header id="header" className="home">
+                        <div id="head" ref={(r) => this.head = r} className="parallax" style={this.state}>
                             <h1 id="logo">
                                 <img className="img-circle" src={myself} alt="personal" />
                                 <span className="title">ZiZi Zheng</span>
-                                {/*<span className="tagline">A beginner for Web, full of passion for new things<br /></span>*/}
                                 <span className="tagline">前端開發初心者，喜歡嘗試新事物<br /></span>
                                 <span className="tagline">
                                     <a onClick={() => window.open('mailto:z0931752096@gmail.com')}>z0931752096@gmail.com</a>
@@ -44,10 +40,9 @@ class Header extends React.Component {
             default:
                 window.removeEventListener('scroll', this.handleScroll);
                 return (
-                    <header id="header" ref="header">
-                        <div id="head" ref="head" className="parallax text-center">
+                    <header id="header">
+                        <div id="head" ref={(r) => this.head = r} className="parallax text-center">
                             <h1 className="title h1__margin">ZiZi Zheng</h1>
-                            {/*<span className="tagline">A beginner for Web, full of passion for new things<br /></span>*/}
                             <span className="tagline">前端開發初心者，喜歡嘗試新事物<br /></span>
 
                             <span className="tagline">

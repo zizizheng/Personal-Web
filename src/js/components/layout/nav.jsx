@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { navAction } from '../../action/navAction';
 
 class Nav extends React.Component {
 
@@ -8,7 +9,6 @@ class Nav extends React.Component {
         super(props);
         this.navbar = null;
         this.handleScroll = this.handleScroll.bind(this);
-        this.changePage = this.changePage.bind(this);
         this.state = { navStyle: "navbar navbar-default navbar-sticky" };
     }
 
@@ -31,17 +31,17 @@ class Nav extends React.Component {
                 <div className="nav-container">
                     <ul className="navbar-list">
                         <li>
-                            <Link to="/" onClick={() => { this.changePage('home') }} className={this.props.curPage === 'home' ? 'active' : ''}>Home</Link>
+                            <Link to="/" onClick={() => { this.changePage(navAction('home')) }} className={this.props.curPage === 'home' ? 'active' : ''}>Home</Link>
                         </li>
                         <li>
-                            <Link to="/about" onClick={() => { this.changePage('about') }} className={this.props.curPage === 'about' ? 'active' : ''}>About
+                            <Link to="/about" onClick={() => { this.changePage(navAction('about')) }} className={this.props.curPage === 'about' ? 'active' : ''}>About
                             </Link>
                         </li>
                         <li>
-                            <Link to="/portfolio" onClick={() => { this.changePage('portfolio') }} className={this.props.curPage === 'portfolio' ? 'active' : ''}>Portfolio</Link>
+                            <Link to="/portfolio" onClick={() => { this.changePage(navAction('portfolio')) }} className={this.props.curPage === 'portfolio' ? 'active' : ''}>Portfolio</Link>
                         </li>
                         <li>
-                            <Link to="/contact" onClick={() => { this.changePage('contact') }} className={this.props.curPage === 'contact' ? 'active' : ''}>Contact
+                            <Link to="/contact" onClick={() => { this.changePage(navAction('contact')) }} className={this.props.curPage === 'contact' ? 'active' : ''}>Contact
                             </Link>
                         </li>
                     </ul>
@@ -51,7 +51,7 @@ class Nav extends React.Component {
     }
 
     changePage(v) {
-        this.props.dispatch({ type: "CHANGE_PAGE", name: v });
+        this.props.dispatch(v);
     }
 
     handleScroll() {

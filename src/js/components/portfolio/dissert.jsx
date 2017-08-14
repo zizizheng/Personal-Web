@@ -158,7 +158,7 @@ function Demo() {
             <div>
                 <img src={layer} alt="ITETS 3 Layers" className="thumbnail" />
                 <p className="no-indent">
-                    ITETS 參考 <a href="https://www.researchgate.net/figure/274718805_fig3_Fig-3-The-three-layer-IoT-architecture" target="_blank"><em>three-layer IoT architecture</em></a> 設計。 相對應的關係為：
+                    ITETS 參考 <a href="https://www.researchgate.net/figure/274718805_fig3_Fig-3-The-three-layer-IoT-architecture" target="_blank" rel="noopener noreferrer"><em>three-layer IoT architecture</em></a> 設計。 相對應的關係為：
                 </p>
                 <ul>
                     <li><strong>Perception Layer（感知層）</strong>: RGB-D sensor</li>

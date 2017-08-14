@@ -15,7 +15,7 @@ export default class Foodhub extends React.Component {
             <article className={this.props.class}>
                 <h1 className="title">Foodhub</h1>
                 <h2 className="subtitle">The goal of Foodhub is to manage donations from charity people and deliver to those who needs help.  </h2>
-                <p>食物銀行必須管理捐贈進來的物資並發送給需要的單位，目前志工皆以紙本為管理的工具，使用上稍嫌不便。此<strong>進存銷系統</strong>將捐贈品的紙本記錄、收據等電子化，並提供介面讓志工操作與管理貨品。
+                <p>食物銀行必須管理捐贈進來的物資並發送給需要的單位，目前志工皆以紙本為管理的工具，使用上稍嫌不便。此<a href="http://52.14.157.152:8080/#/page-login" target="_blank" rel="noopener noreferrer"><strong>進存銷系統</strong></a>將捐贈品的紙本記錄、收據等電子化，並提供介面讓志工操作與管理貨品。
                 </p>
                 <p>此系統使用 <strong>Angular 2(4)</strong> 做為前端開發框架，
                     後端伺服器使用<strong> Node.js</strong> 和 <strong>express.js</strong>，

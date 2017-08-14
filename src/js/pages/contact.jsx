@@ -1,12 +1,11 @@
 import React from 'react';
+import Instagram from '../containers/contact/instagram';
 
 import fbImage from '../../assets/images/fb.png';
 import googleImage from '../../assets/images/google.jpg';
 import leetcodeImage from '../../assets/images/leetcode.png';
 import igImage from '../../assets/images/instagram.png';
 import gitImage from '../../assets/images/github.png';
-import Modal from '../components/contact/modal';
-
 
 export default class Contact extends React.Component {
 
@@ -57,7 +56,7 @@ export default class Contact extends React.Component {
                             歡迎點開下方的圖示與我取得聯繫
                         </h3>
                         <container className="topspace">
-                            <a href="https://m.me/zizi.zheng.1" target="_blank" >
+                            <a href="https://m.me/zizi.zheng.1" target="_blank" rel="noopener noreferrer">
                                 <img id="fbImg" className="animated pulse"
                                     src={fbImage} alt="fb icon"
                                     onMouseOver={() => this.onHover('fb')} />
@@ -72,10 +71,10 @@ export default class Contact extends React.Component {
                                 <img className="animated pulse" src={igImage} alt="instagram icon" onMouseOver={() => this.onHover('ig')}
                                     onClick={() => this.toggleModal(igImage)} />
                             </a>
-                            <a href="https://github.com/zizizheng" target="_blank">
+                            <a href="https://github.com/zizizheng" target="_blank" rel="noopener noreferrer">
                                 <img className="animated pulse" src={gitImage} alt="github icon" onMouseOver={() => this.onHover('gh')} />
                             </a>
-                            <a href="https://leetcode.com/zizizheng/" target="_blank">
+                            <a href="https://leetcode.com/zizizheng/" target="_blank" rel="noopener noreferrer">
                                 <img id="leetImg" className="animated pulse" src={leetcodeImage} alt="leetcode icon" onMouseOver={() => this.onHover('leet')} />
                             </a>
                         </container>
@@ -88,7 +87,7 @@ export default class Contact extends React.Component {
 
                 </div>
 
-                {this.state.showModal ? <Modal src={this.state.onModal} /> : ''};
+                {this.state.showModal ? <Instagram src={this.state.onModal} /> : ''};
             </main>
         );
     }

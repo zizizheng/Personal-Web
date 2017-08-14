@@ -160,7 +160,7 @@ export default class Skill extends React.Component {
                 <article>
                     <p className="lead text-muted">於九年前開始接觸木吉他，開啟了自學之路<br />
                         在 2014 年的九月，我與幾個對音樂有熱忱和想法的朋友組了一個創作樂團 <br />
-                        樂團名稱是 <a href="https://www.facebook.com/thebarpretender/" target="_blank"><strong>偽酒保</strong></a>，而我在團內負責主奏吉他手
+                        樂團名稱是 <a href="https://www.facebook.com/thebarpretender/" target="_blank" rel="noopener noreferrer"><strong>偽酒保</strong></a>，而我在團內負責主奏吉他手
                     </p>
                 </article>
 

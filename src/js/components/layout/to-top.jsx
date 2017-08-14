@@ -17,7 +17,7 @@ class ToTop extends Component {
     render() {
         return (
             <div id="to-top" onClick={() => Scroll.animateScroll.scrollToTop()} style={this.state.style}>
-                <img className="animated pulse infinite" src={above} alt="to above img" />
+                <img className="animated pulse infinite" src={above} alt="to top img" />
             </div>
         );
     }
